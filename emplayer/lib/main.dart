@@ -1,3 +1,4 @@
+import 'package:emplayer/Niranjan_account_page/account_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return account();
   }
 }
