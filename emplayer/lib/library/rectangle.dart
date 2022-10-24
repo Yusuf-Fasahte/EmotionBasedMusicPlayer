@@ -32,7 +32,7 @@ class _RectangleState extends State<Rectangle> {
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 123, 0, 255),
                   borderRadius: BorderRadius.circular(35),
                 ),
               ),

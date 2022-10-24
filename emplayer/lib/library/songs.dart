@@ -1,3 +1,4 @@
+import 'package:emplayer/library/songcontain.dart';
 import 'package:flutter/material.dart';
 
 class Songs extends StatefulWidget {
@@ -13,8 +14,32 @@ class _SongsState extends State<Songs> {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Text("data"),
-        ),
+            child: Padding(
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Container(
+                  height: 80,
+                  color: Colors.amber,
+                ),
+              ),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+              SongContainer(),
+            ],
+          ),
+        )),
       ),
     );
   }
