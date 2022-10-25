@@ -25,13 +25,14 @@ class _SongsState extends State<Songs> {
             Align(
               alignment: Alignment.topLeft,
               child: IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    Icons.arrow_back_ios_new_rounded,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
+                iconSize: 30,
+                icon: Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(top: 8, left: 48, bottom: 30),
