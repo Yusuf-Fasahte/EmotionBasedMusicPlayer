@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class Rectangle extends StatefulWidget {
   final int x;
-  Rectangle(this.x);
+  final String iconName;
+  Rectangle(this.x, this.iconName);
 
   @override
   State<Rectangle> createState() => _RectangleState();
@@ -14,13 +15,16 @@ class _RectangleState extends State<Rectangle> {
     "Downloads",
     "Favorite Songs",
     "Saved Playlists",
-    "Albums"
+    "Albums",
+    "Liked Songs",
+    "Playlist"
   ];
-  List<int> songNum = [105, 1023, 23, 12];
+  List<int> songNum = [105, 1023, 23, 12, 23, 54];
 
   @override
   Widget build(BuildContext context) {
     int x = widget.x;
+    String iconName = widget.iconName;
     return Padding(
       padding: const EdgeInsets.all(25),
       child: Container(
@@ -42,7 +46,7 @@ class _RectangleState extends State<Rectangle> {
                 child: Align(
                   alignment: Alignment.center,
                   child: Image.asset(
-                    'lib/icons/music.png',
+                    iconName,
                     height: 50,
                   ),
                 ),

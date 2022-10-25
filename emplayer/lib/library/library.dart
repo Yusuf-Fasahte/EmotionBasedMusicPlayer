@@ -41,10 +41,12 @@ class Library extends StatelessWidget {
           ),
           Column(
             children: [
-              Rectangle(0),
-              Rectangle(1),
-              Rectangle(2),
-              Rectangle(3),
+              Rectangle(0, "lib/icons/music.png"),
+              Rectangle(1, "lib/icons/music.png"),
+              Rectangle(2, "lib/icons/music.png"),
+              Rectangle(3, "lib/icons/music.png"),
+              Rectangle(4, "lib/icons/music.png"),
+              Rectangle(5, "lib/icons/music.png"),
             ],
           ),
         ],
