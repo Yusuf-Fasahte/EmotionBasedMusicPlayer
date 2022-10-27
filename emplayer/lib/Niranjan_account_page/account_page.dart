@@ -1,221 +1,359 @@
-import 'package:flutter/material.dart';
+import 'dart:ffi';
 
-class account extends StatefulWidget {
+import 'package:flutter/material.dart';
+import 'profile.dart';
+import 'setting_page.dart';
+import 'history_page.dart';
+
+class account extends StatelessWidget {
   const account({super.key});
 
   @override
-  State<account> createState() => _accountState();
-}
-
-class _accountState extends State<account> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 1, 32, 48),
-        body: Column(children: [
-          Container(
-            alignment: Alignment.center,
-            width: 135,
-            height: 135,
-            margin: EdgeInsets.only(top: 40, left: 0),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://www7.lunapic.com/editor/working/16666287856110336?73544880542')),
-                color: Color.fromARGB(255, 0, 255, 200),
-                borderRadius: BorderRadius.circular(100)),
-          ),
-          Container(
-              margin: EdgeInsets.only(left: 10, top: 8),
-              child: Text(
-                "DEADPOOL",
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  wordSpacing: 10,
-                  letterSpacing: 1.2,
-                  fontSize: 23,
-                  color: Color.fromARGB(255, 0, 255, 200),
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Color.fromARGB(255, 24, 43, 49),
+          body: Column(children: [
+            Container(
+              child: Row(children: [
+                Container(
+                  alignment: Alignment.center,
+                  child: IconButton(
+                    icon: const Icon(Icons.navigate_before_rounded),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    iconSize: 46,
+                    onPressed: () {},
+                  ),
                 ),
-              )),
-          Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 55),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              ),
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 55),
+                Container(
                   child: Text(
-                    "My Profile",
+                    "Account",
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      wordSpacing: 0,
-                      letterSpacing: 1.2,
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 255, 200),
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.4),
+                  ),
+                )
+              ]),
+            ),
+            Container(
+              alignment: Alignment.center,
+              width: 80,
+              height: 80,
+              margin: EdgeInsets.only(top: 30, left: 0),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          'https://c4.wallpaperflare.com/wallpaper/285/215/820/red-weapons-fiction-mask-wallpaper-preview.jpg')),
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(100)),
+            ),
+            Container(
+                margin: EdgeInsets.only(left: 10, top: 8),
+                child: Text(
+                  "DEADPOOL",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    wordSpacing: 10,
+                    letterSpacing: 1.2,
+                    fontSize: 23,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                )),
+
+            Container(
+              margin: EdgeInsets.only(top: 40, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [
+                  Container(
+                    child: Icon(
+                      Icons.person,
+                      size: 31,
+                      color: Colors.white,
                     ),
-                  )),
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 55, left: 175),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 0),
+                      child: Text(
+                        "My Profile",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 0,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0, left: 185),
+                    alignment: Alignment.center,
+                    child: IconButton(
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      iconSize: 44,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => profile_page(),
+                          ),
+                        );
+                      },
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                ],
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10),
-                  child: Text(
-                    "Account Setting",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      wordSpacing: 0,
-                      letterSpacing: 1.2,
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 255, 200),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2, left: 7, right: 5),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      'assets/images/setting2.png',
+                      width: 26,
+                      height: 26,
+
+                      fit: BoxFit.fill,
+                      // fit: BoxFit.fill,
                     ),
-                  )),
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10, left: 116),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 0),
+                      child: Text(
+                        "Account Setting",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 0,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0, left: 126),
+                    alignment: Alignment.center,
+                    child: IconButton(
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      iconSize: 44,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => setting()));
+                      },
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                ],
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10),
-                  child: Text(
-                    "History",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      wordSpacing: 10,
-                      letterSpacing: 1.2,
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 255, 200),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.history_rounded,
+                      size: 32,
+                      color: Colors.white,
                     ),
-                  )),
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10, left: 204),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
+                    // child: Image.asset(
+                    //   'assets/images/history.png',
+                    //   width: 30,
+                    //   height: 27,
+
+                    //   fit: BoxFit.fill,
+                    //   // fit: BoxFit.fill,
+                    // ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 0),
+                      child: Text(
+                        "History & Privacy",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 2.5,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0, left: 107),
+                    alignment: Alignment.center,
+                    child: IconButton(
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      iconSize: 44,
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => History()));
+                      },
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                ],
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10),
-                  child: Text(
-                    "Help & Support",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      wordSpacing: 0,
-                      letterSpacing: 1.2,
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 255, 200),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.headphones,
+                      size: 28,
+                      color: Colors.white,
                     ),
-                  )),
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10, left: 124),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              )
-            ],
-          ),
-          Row(
-            children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 0),
+                      child: Text(
+                        "Help & Support",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 0,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0, left: 134),
+                    alignment: Alignment.center,
+                    child: IconButton(
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      iconSize: 44,
+                      onPressed: () {},
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                ],
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10),
-                  child: Text(
-                    "Logout",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      wordSpacing: 10,
-                      letterSpacing: 1.2,
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 0, 255, 200),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.logout_rounded,
+                      size: 29,
+                      color: Colors.white,
                     ),
-                  )),
-              Container(
-                width: 50,
-                height: 50,
-                margin: EdgeInsets.only(top: 10, left: 208),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 255, 0, 0),
-                ),
-              )
-            ],
-          ),
-          // Container(
-          //   width: 100,
-          //   height: 100,
-          //   margin: EdgeInsets.only(top: 10),
-          //   color: Color.fromARGB(255, 0, 255, 200),
-          // )
-        ]),
+                    // child: Image.asset(
+                    //   'assets/images/logout.png',
+                    //   width: 29,
+                    //   height: 29,
+
+                    //   fit: BoxFit.fill,
+                    //   // fit: BoxFit.fill,
+                    // ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 0),
+                      child: Text(
+                        "Logout",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 10,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0, left: 218),
+                    alignment: Alignment.center,
+                    child: IconButton(
+                      icon: const Icon(Icons.navigate_next_rounded),
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      iconSize: 44,
+                      onPressed: () {},
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            // Container(
+            //   width: 100S,
+            //   height: 100,
+            //   margin: EdgeInsets.only(top: 10),
+            //   color: Color.fromARGB(255, 0, 255, 200),
+            // )
+          ]),
+        ),
       ),
     );
   }
