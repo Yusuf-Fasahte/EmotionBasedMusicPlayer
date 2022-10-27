@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SongContainer extends StatefulWidget {
-  const SongContainer({super.key});
+  final String songName;
+  final String artist;
+  SongContainer(this.songName, this.artist);
 
   @override
   State<SongContainer> createState() => _SongContainerState();
@@ -10,20 +12,21 @@ class SongContainer extends StatefulWidget {
 class _SongContainerState extends State<SongContainer> {
   @override
   Widget build(BuildContext context) {
+    String songName = widget.songName;
+    String artist = widget.artist;
     return Padding(
       padding: const EdgeInsets.only(top: 2, bottom: 2, left: 20, right: 20),
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(5),
+            padding: EdgeInsets.all(5),
             child: Container(
-              height: 80,
-              width: 80,
-              // height: 30,
+              height: 70,
+              width: 70,
               child: Align(
                 alignment: Alignment.center,
                 child: Image.asset(
-                  'lib/icons/music.png',
+                  'assets/images/icons/music.png',
                   height: 45,
                 ),
               ),
@@ -34,17 +37,16 @@ class _SongContainerState extends State<SongContainer> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
             child: SizedBox(
-              // color: Colors.red,
-              height: 60,
+              // height: 60,
               width: 250,
               child: Column(
-                children: const [
+                children: [
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Happier Than Ever",
+                      songName,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
@@ -54,7 +56,7 @@ class _SongContainerState extends State<SongContainer> {
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      "Billie Eilish",
+                      artist,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
@@ -63,7 +65,6 @@ class _SongContainerState extends State<SongContainer> {
                   ),
                 ],
               ),
-              // width: 200,
             ),
           ),
         ],

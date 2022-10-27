@@ -26,7 +26,7 @@ class _RectangleState extends State<Rectangle> {
     int x = widget.x;
     String iconName = widget.iconName;
     return Padding(
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(20),
       child: Container(
         height: 120,
         width: double.infinity,
@@ -64,6 +64,7 @@ class _RectangleState extends State<Rectangle> {
                     name[x],
                     style: TextStyle(
                       fontSize: 18,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -90,6 +91,7 @@ class _RectangleState extends State<Rectangle> {
                 iconSize: 40,
                 icon: Icon(
                   Icons.navigate_next_rounded,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.push(

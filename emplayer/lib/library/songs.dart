@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:emplayer/library/songcontain.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +15,9 @@ class _SongsState extends State<Songs> {
   @override
   Widget build(BuildContext context) {
     String name = widget.name;
-    // int x = 0;
-    return MaterialApp(
-      home: Scaffold(
-        body: SafeArea(
-            child: ListView(
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
           children: [
             Container(
               height: 16,
@@ -50,20 +50,17 @@ class _SongsState extends State<Songs> {
                 ),
               ),
             ),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
-            SongContainer(),
+            SongContainer("EK Tarfa", "Darshan Raval"),
+            SongContainer("Haaniya Ve", "Jubin Nautiyal"),
+            SongContainer("Jug Jug Jeeve", "Sachet Tandon, Parampara Tandon"),
+            SongContainer("Manike", "Yohani, Jubin Nautiyal"),
+            SongContainer("Jane Na Dunga Kahin", "Armaan Malik"),
+            SongContainer("Barbaadiyan", "Sachet Tandon, Nikhita Gandhi"),
+            SongContainer("Tera Hua", "Atif Aslam"),
+            SongContainer("Jab Tak", "Armaan Malik"),
+            SongContainer("Pee Loon", "Mahit Chauhan"),
           ],
-        )),
+        ),
       ),
     );
   }
