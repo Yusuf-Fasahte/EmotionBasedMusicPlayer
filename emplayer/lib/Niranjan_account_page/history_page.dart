@@ -3,14 +3,14 @@ import 'setting_page.dart';
 
 class History extends StatefulWidget {
   const History({super.key});
-
+  
   @override
   State<History> createState() => _HistoryState();
 }
 
 class _HistoryState extends State<History> {
   @override
-  bool val1 = true;
+  bool val1 = false;
   bool val2 = true;
   bool val3 = true;
   bool val4 = true;
@@ -51,7 +51,7 @@ class _HistoryState extends State<History> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
           child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 24, 43, 49),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         body: Container(
           child: Column(
             children: [
@@ -172,7 +172,7 @@ class _HistoryState extends State<History> {
                     height: 50,
 
                     child: FittedBox(
-                      child: customSwitch(val1, onChangeFunction1),
+                      child: customSwitch(val2, onChangeFunction2),
                     ),
                     // customSwitch('Abcd', val2, onChangeFunction2),
                   ),
@@ -196,6 +196,33 @@ class _HistoryState extends State<History> {
                       width: 50,
                       height: 50,
                       margin: EdgeInsets.only(top: 20, left: 126),
+                      alignment: Alignment.center,
+                      child: IconButton(
+                        icon: const Icon(Icons.navigate_next_rounded),
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        iconSize: 44,
+                        onPressed: () {},
+                      ))
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(left: 10, top: 10),
+                      child: Text(
+                        "Change Password",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          wordSpacing: 0,
+                          letterSpacing: 1.2,
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      )),
+                  Container(
+                      width: 50,
+                      height: 50,
+                      margin: EdgeInsets.only(top: 8, left: 161),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),

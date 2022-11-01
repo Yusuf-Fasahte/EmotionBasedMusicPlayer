@@ -1,4 +1,7 @@
+import 'package:emplayer/Niranjan_account_page/account_page.dart';
+import 'package:emplayer/Niranjan_account_page/profile/profile.dart';
 import 'package:flutter/material.dart';
+import '../account_page.dart';
 
 class editname extends StatefulWidget {
   const editname({super.key});
@@ -14,7 +17,7 @@ class _editnameState extends State<editname> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
           child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 24, 43, 49),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         body: Column(
           children: [
             Row(
@@ -53,23 +56,52 @@ class _editnameState extends State<editname> {
   }
 }
 
-class MyCustomForm extends StatelessWidget {
-  const MyCustomForm({super.key});
+class MyCustomForm extends StatefulWidget {
+  MyCustomForm({super.key});
 
+  @override
+  State<MyCustomForm> createState() => _MyCustomFormState();
+}
+
+class _MyCustomFormState extends State<MyCustomForm> {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
+      children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextFormField(
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: 'Enter your username',
-            ),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+          child: TextField(
+            style: TextStyle(
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+            autofocus: true,
+            decoration: InputDecoration(
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                fillColor: Color.fromARGB(255, 34, 33, 33),
+                labelText: 'Enter Your Username',
+                labelStyle: TextStyle(
+                  fontSize: 20,
+                )),
           ),
         ),
+        Container(
+          width: 50,
+          height: 50,
+          margin: EdgeInsets.only(left: 330),
+          alignment: Alignment.center,
+          child: IconButton(
+            icon: const Icon(Icons.navigate_next_rounded),
+            color: Color.fromARGB(255, 255, 255, 255),
+            iconSize: 44,
+            onPressed: () {},
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+          ),
+        )
       ],
     );
   }

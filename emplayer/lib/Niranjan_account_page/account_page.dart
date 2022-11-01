@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'profile.dart';
+import 'profile/profile.dart';
 import 'setting_page.dart';
 import 'history_page.dart';
 
@@ -14,7 +14,7 @@ class account extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 24, 43, 49),
+          backgroundColor: Color.fromARGB(255, 0, 0, 0),
           body: Column(children: [
             Container(
               child: Row(children: [
@@ -31,7 +31,7 @@ class account extends StatelessWidget {
                   child: Text(
                     "Account",
                     style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 32,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.4),
@@ -39,28 +39,34 @@ class account extends StatelessWidget {
                 )
               ]),
             ),
-            Container(
-              alignment: Alignment.center,
-              width: 80,
-              height: 80,
-              margin: EdgeInsets.only(top: 30, left: 0),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                          'https://c4.wallpaperflare.com/wallpaper/285/215/820/red-weapons-fiction-mask-wallpaper-preview.jpg')),
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(100)),
+            GestureDetector(
+              onTap: (() {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Largeimg()));
+              }),
+              child: Container(
+                alignment: Alignment.center,
+                width: 90,
+                height: 90,
+                margin: EdgeInsets.only(top: 25, left: 0),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                            'https://c4.wallpaperflare.com/wallpaper/285/215/820/red-weapons-fiction-mask-wallpaper-preview.jpg')),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(100)),
+              ),
             ),
             Container(
                 margin: EdgeInsets.only(left: 10, top: 8),
                 child: Text(
-                  "DEADPOOL",
+                  "Ryan Reynolds",
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    wordSpacing: 10,
+                    wordSpacing: 0,
                     letterSpacing: 1.2,
-                    fontSize: 23,
+                    fontSize: 27,
                     color: Color.fromARGB(255, 255, 255, 255),
                   ),
                 )),

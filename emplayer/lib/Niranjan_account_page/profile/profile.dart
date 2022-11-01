@@ -1,6 +1,11 @@
-import 'package:emplayer/Niranjan_account_page/edit_name.dart';
+import 'package:emplayer/Niranjan_account_page/profile/edit_name.dart';
 import 'package:flutter/material.dart';
-import 'account_page.dart';
+import '../account_page.dart';
+import 'edit_age.dart';
+import 'edit_contact.dart';
+import 'edit_gender.dart';
+import 'edit_gmail.dart';
+import 'edit_name.dart';
 
 class profile_page extends StatelessWidget {
   const profile_page({super.key});
@@ -11,7 +16,7 @@ class profile_page extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
-            backgroundColor: Color.fromARGB(255, 24, 43, 49),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             body: Container(
               child: ListView(
                 scrollDirection: Axis.vertical,
@@ -63,12 +68,12 @@ class profile_page extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      margin: EdgeInsets.only(left: 140, top: 8),
+                      margin: EdgeInsets.only(left: 120, top: 8),
                       child: Text(
-                        "DEADPOOL",
+                        "Ryan Reynolds",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
-                          wordSpacing: 3,
+                          wordSpacing: 0,
                           letterSpacing: 1.2,
                           fontSize: 23,
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -129,7 +134,7 @@ class profile_page extends StatelessWidget {
                         Container(
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
-                            "DEADPOOL",
+                            "Ryan Reynolds",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontSize: 19),
@@ -141,7 +146,7 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editname()));
                           }),
                           child: Container(
-                            margin: EdgeInsets.only(left: 238),
+                            margin: EdgeInsets.only(left: 212),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -153,10 +158,10 @@ class profile_page extends StatelessWidget {
                       ],
                     ),
                     width: 400,
-                    height: 33,
+                    height: 40,
                     margin: EdgeInsets.only(top: 6, left: 10, right: 10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 65, 64, 64),
+                        color: Color.fromARGB(255, 49, 49, 49),
                         borderRadius: BorderRadius.circular(16)),
                   ),
                   Container(
@@ -183,29 +188,35 @@ class profile_page extends StatelessWidget {
                                 fontSize: 19),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 238),
-                          child: Text(
-                            "EDIT",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 255, 242),
-                                fontSize: 19),
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => editcontact()));
+                          }),
+                          child: Container(
+                            margin: EdgeInsets.only(left: 238),
+                            child: Text(
+                              "EDIT",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 255, 242),
+                                  fontSize: 19),
+                            ),
                           ),
                         )
                       ],
                     ),
                     width: 400,
-                    height: 33,
+                    height: 40,
                     margin: EdgeInsets.only(top: 6, left: 10, right: 10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 65, 64, 64),
+                        color: Color.fromARGB(255, 49, 49, 49),
                         borderRadius: BorderRadius.circular(16)),
                   ),
                   Container(
                     alignment: Alignment.centerLeft,
                     margin: EdgeInsets.only(left: 10, top: 12),
                     child: Text(
-                      "Gmail",
+                      "Email",
                       style: TextStyle(
                           fontSize: 22,
                           color: Colors.white,
@@ -225,22 +236,28 @@ class profile_page extends StatelessWidget {
                                 fontSize: 19),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 87),
-                          child: Text(
-                            "EDIT",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 255, 242),
-                                fontSize: 19),
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => editgmail()));
+                          }),
+                          child: Container(
+                            margin: EdgeInsets.only(left: 87),
+                            child: Text(
+                              "EDIT",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 255, 242),
+                                  fontSize: 19),
+                            ),
                           ),
                         )
                       ],
                     ),
                     width: 400,
-                    height: 33,
+                    height: 40,
                     margin: EdgeInsets.only(top: 6, left: 10, right: 10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 65, 64, 64),
+                        color: Color.fromARGB(255, 49, 49, 49),
                         borderRadius: BorderRadius.circular(16)),
                   ),
                   Container(
@@ -267,22 +284,28 @@ class profile_page extends StatelessWidget {
                                 fontSize: 19),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 314),
-                          child: Text(
-                            "EDIT",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 255, 242),
-                                fontSize: 19),
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => editage()));
+                          }),
+                          child: Container(
+                            margin: EdgeInsets.only(left: 314),
+                            child: Text(
+                              "EDIT",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 255, 242),
+                                  fontSize: 19),
+                            ),
                           ),
                         )
                       ],
                     ),
                     width: 400,
-                    height: 33,
+                    height: 40,
                     margin: EdgeInsets.only(top: 6, left: 10, right: 10),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 65, 64, 64),
+                        color: Color.fromARGB(255, 49, 49, 49),
                         borderRadius: BorderRadius.circular(16)),
                   ),
                   Container(
@@ -309,23 +332,29 @@ class profile_page extends StatelessWidget {
                                 fontSize: 19),
                           ),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 285),
-                          child: Text(
-                            "EDIT",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 255, 242),
-                                fontSize: 19),
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => editgender()));
+                          }),
+                          child: Container(
+                            margin: EdgeInsets.only(left: 285),
+                            child: Text(
+                              "EDIT",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 0, 255, 242),
+                                  fontSize: 19),
+                            ),
                           ),
                         )
                       ],
                     ),
                     width: 400,
-                    height: 33,
+                    height: 40,
                     margin: EdgeInsets.only(
                         top: 6, left: 10, right: 10, bottom: 20),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 65, 64, 64),
+                        color: Color.fromARGB(255, 49, 49, 49),
                         borderRadius: BorderRadius.circular(16)),
                   ),
                 ],

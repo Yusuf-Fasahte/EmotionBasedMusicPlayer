@@ -51,7 +51,7 @@ class _settingState extends State<setting> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-            backgroundColor: Color.fromARGB(255, 24, 43, 49),
+            backgroundColor: Color.fromARGB(255, 0, 0, 0),
             body: Container(
               child: ListView(
                 scrollDirection: Axis.vertical,
@@ -372,10 +372,11 @@ class _settingState extends State<setting> {
                         ),
                       )
                     ]),
-                    height: 44,
-                    margin: EdgeInsets.only(top: 12, left: 4, right: 4),
+                    height: 33,
+                    margin:
+                        EdgeInsets.only(top: 12, left: 4, right: 4, bottom: 10),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 5, 30, 33),
+                      color: Color.fromARGB(255, 31, 32, 32),
                       borderRadius: BorderRadius.circular(14),
                     ),
                   ),
