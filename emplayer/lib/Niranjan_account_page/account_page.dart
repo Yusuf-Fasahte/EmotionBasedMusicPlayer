@@ -1,9 +1,11 @@
 import 'dart:ffi';
 
+import 'package:emplayer/Niranjan_account_page/helpsupport.dart';
 import 'package:flutter/material.dart';
 import 'profile/profile.dart';
 import 'setting_page.dart';
 import 'history_page.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class account extends StatelessWidget {
   const account({super.key});
@@ -59,17 +61,28 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-                margin: EdgeInsets.only(left: 10, top: 8),
-                child: Text(
-                  "Ryan Reynolds",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    wordSpacing: 0,
-                    letterSpacing: 1.2,
+              margin: EdgeInsets.only(left: 7git5, top: 11),
+              child: Center(
+                  child: SizedBox(
+                width: 250.0,
+                child: DefaultTextStyle(
+                  style: const TextStyle(
                     fontSize: 27,
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontFamily: 'Agne',
                   ),
-                )),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      TypewriterAnimatedText('Ryan Reynolds'),
+                      TypewriterAnimatedText('Ryan Reynolds'),
+                      TypewriterAnimatedText('Ryan Reynolds'),
+                    ],
+                    onTap: () {
+                      print("Tap Event");
+                    },
+                  ),
+                ),
+              )),
+            ),
 
             Container(
               margin: EdgeInsets.only(top: 40, left: 7, right: 6),
@@ -285,7 +298,10 @@ class account extends StatelessWidget {
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
                       iconSize: 44,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => help()));
+                      },
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),

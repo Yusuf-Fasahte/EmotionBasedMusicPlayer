@@ -6,6 +6,7 @@ import 'edit_contact.dart';
 import 'edit_gender.dart';
 import 'edit_gmail.dart';
 import 'edit_name.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class profile_page extends StatelessWidget {
   const profile_page({super.key});
@@ -68,17 +69,28 @@ class profile_page extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      margin: EdgeInsets.only(left: 120, top: 8),
-                      child: Text(
-                        "Ryan Reynolds",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          wordSpacing: 0,
-                          letterSpacing: 1.2,
-                          fontSize: 23,
-                          color: Color.fromARGB(255, 255, 255, 255),
+                    margin: EdgeInsets.only(left: 75, top: 10),
+                    child: Center(
+                        child: SizedBox(
+                      width: 250.0,
+                      child: DefaultTextStyle(
+                        style: const TextStyle(
+                          fontSize: 27,
+                          fontFamily: 'Agne',
                         ),
-                      )),
+                        child: AnimatedTextKit(
+                          animatedTexts: [
+                            TypewriterAnimatedText('Ryan Reynolds'),
+                            TypewriterAnimatedText('Ryan Reynolds'),
+                            TypewriterAnimatedText('Ryan Reynolds'),
+                          ],
+                          onTap: () {
+                            print("Tap Event");
+                          },
+                        ),
+                      ),
+                    )),
+                  ),
                   Row(
                     children: [
                       Container(
