@@ -61,7 +61,7 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 7git5, top: 11),
+              margin: EdgeInsets.only(left: 75, top: 11),
               child: Center(
                   child: SizedBox(
                 width: 250.0,
@@ -75,6 +75,9 @@ class account extends StatelessWidget {
                       TypewriterAnimatedText('Ryan Reynolds'),
                       TypewriterAnimatedText('Ryan Reynolds'),
                       TypewriterAnimatedText('Ryan Reynolds'),
+                      TypewriterAnimatedText('Ryan Reynolds'),
+                      
+                      TypewriterAnimatedText('Ryan Reynolds'),
                     ],
                     onTap: () {
                       print("Tap Event");
@@ -83,7 +86,6 @@ class account extends StatelessWidget {
                 ),
               )),
             ),
-
             Container(
               margin: EdgeInsets.only(top: 40, left: 7, right: 6),
               decoration:
