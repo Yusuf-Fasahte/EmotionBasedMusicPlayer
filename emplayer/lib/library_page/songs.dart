@@ -20,18 +20,18 @@ class _SongsState extends State<Songs> {
             Container(
               height: 16,
             ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: IconButton(
-                iconSize: 30,
-                icon: Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ),
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: IconButton(
+            //     iconSize: 30,
+            //     icon: Icon(
+            //       Icons.arrow_back_ios_new_rounded,
+            //     ),
+            //     onPressed: () {
+            //       Navigator.pop(context);
+            //     },
+            //   ),
+            // ),
             Padding(
               padding: EdgeInsets.only(top: 8, left: 48, bottom: 30),
               child: Container(
@@ -48,10 +48,10 @@ class _SongsState extends State<Songs> {
                 ),
               ),
             ),
+            SongContainer("Manike", "Yohani, Jubin Nautiyal"),
             SongContainer("EK Tarfa", "Darshan Raval"),
             SongContainer("Haaniya Ve", "Jubin Nautiyal"),
             SongContainer("Jug Jug Jeeve", "Sachet Tandon, Parampara Tandon"),
-            SongContainer("Manike", "Yohani, Jubin Nautiyal"),
             SongContainer("Jane Na Dunga Kahin", "Armaan Malik"),
             SongContainer("Barbaadiyan", "Sachet Tandon, Nikhita Gandhi"),
             SongContainer("Tera Hua", "Atif Aslam"),

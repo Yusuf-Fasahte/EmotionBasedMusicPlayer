@@ -1,5 +1,6 @@
 import 'package:emplayer/home_page/homititle.dart';
 import 'package:emplayer/home_page/playlistlists.dart';
+import 'package:emplayer/home_page/vertSongs.dart';
 import 'package:flutter/material.dart';
 
 class TrendingSongs extends StatelessWidget {
@@ -31,23 +32,23 @@ class TrendingSongs extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  MyPlaylists(
+                  VerticleSongs(
                       'https://i.pinimg.com/originals/80/7d/f5/807df594051aa69d40b3e0b7c7c013ad.jpg',
                       'Under Influence'),
-                  MyPlaylists(
+                  VerticleSongs(
                       'https://cdns-images.dzcdn.net/images/cover/f9eb250381f53fd91f11a854fa040709/500x500.jpg',
                       'One Dance'),
-                  MyPlaylists(
+                  VerticleSongs(
                       'https://i.ytimg.com/vi/SjeqyLFsFWw/maxresdefault.jpg',
                       'Phut Hon'),
-                  MyPlaylists(
+                  VerticleSongs(
                       'https://i1.sndcdn.com/artworks-000405574461-rgdf0q-t500x500.jpg',
                       'Dancin'),
-                  MyPlaylists(
+                  VerticleSongs(
                       //'https://static.mixupload.com/n2/media/track/2239/422/cover_orig.jpg',
                       'https://fastly.jwwb.nl/public/n/v/d/temp-dverukjfiuwwjlkvskjv/OneKissFestivalmixcoverfull.jpg',
                       'One Kiss'),
-                  MyPlaylists(
+                  VerticleSongs(
                       'https://m.media-amazon.com/images/I/81quKaTYbML._SS500_.jpg',
                       'Hey Mama'),
                 ],

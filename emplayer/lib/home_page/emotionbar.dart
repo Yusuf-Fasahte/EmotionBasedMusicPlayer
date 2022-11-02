@@ -85,6 +85,14 @@ class Mood extends StatelessWidget {
                     ),
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Calm'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'CALM',
                           style: TextStyle(
@@ -94,7 +102,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -119,6 +126,14 @@ class Mood extends StatelessWidget {
                   children: [
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Sad'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'SAD',
                           style: TextStyle(
@@ -128,7 +143,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -145,6 +159,14 @@ class Mood extends StatelessWidget {
                     ),
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Lonely'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'LONELY',
                           style: TextStyle(
@@ -154,7 +176,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -179,6 +200,14 @@ class Mood extends StatelessWidget {
                   children: [
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Ambient'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'AMBIENT',
                           style: TextStyle(
@@ -188,7 +217,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -205,6 +233,14 @@ class Mood extends StatelessWidget {
                     ),
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Boredom'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'BOREDOM',
                           style: TextStyle(
@@ -214,7 +250,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -239,6 +274,14 @@ class Mood extends StatelessWidget {
                   children: [
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Romantic'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'ROMANTIC',
                           style: TextStyle(
@@ -248,7 +291,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,
@@ -265,6 +307,14 @@ class Mood extends StatelessWidget {
                     ),
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Revenge'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'REVENGE',
                           style: TextStyle(
@@ -274,7 +324,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,

@@ -1,3 +1,4 @@
+import 'package:emplayer/library_page/songs.dart';
 import 'package:flutter/material.dart';
 
 class Artists extends StatelessWidget {
@@ -11,18 +12,28 @@ class Artists extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 5),
-          child: Container(
-            width: 120,
-            height: 120,
-            //color: Colors.amber,
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(link),
+          child: GestureDetector(
+            onTap: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => Songs(ArtistName),
+              //   ),
+              // );
+            },
+            child: SizedBox(
+              width: 120,
+              height: 120,
+              //color: Colors.amber,
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(link),
+              ),
             ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-          child: Container(
+          child: SizedBox(
             width: 120,
             height: 35,
             child: Text(

@@ -1,13 +1,21 @@
+import 'package:emplayer/library_page/play.dart';
 import 'package:emplayer/library_page/songs.dart';
 import 'package:flutter/material.dart';
 
-class MyPlaylists extends StatelessWidget {
+class VerticleSongs extends StatefulWidget {
   String link;
   String PlaylistName;
-  MyPlaylists(this.link, this.PlaylistName, {super.key});
+  VerticleSongs(this.link, this.PlaylistName, {super.key});
 
   @override
+  State<VerticleSongs> createState() => _VerticleSongsState();
+}
+
+class _VerticleSongsState extends State<VerticleSongs> {
+  @override
   Widget build(BuildContext context) {
+    String link = widget.link;
+    String PlaylistName = widget.PlaylistName;
     return Column(
       children: [
         Padding(
@@ -17,7 +25,7 @@ class MyPlaylists extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Songs(PlaylistName),
+                  builder: (context) => NowPlaying(link, PlaylistName, ''),
                 ),
               );
             },
@@ -25,20 +33,21 @@ class MyPlaylists extends StatelessWidget {
               width: 120,
               height: 120,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  image: DecorationImage(
-                      image: NetworkImage(link), fit: BoxFit.cover)),
+                borderRadius: BorderRadius.circular(15),
+                image: DecorationImage(
+                    image: NetworkImage(link), fit: BoxFit.cover),
+              ),
             ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 5, 0, 0),
           child: Container(
-            width: 120,
+            width: 130,
             height: 20,
             //color: Colors.amber,
             child: Text(
-              PlaylistName,
+              widget.PlaylistName,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
             alignment: Alignment.center,

@@ -14,10 +14,10 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
+    return SizedBox(
+      height: 60,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           IconButton(
             onPressed: () {
@@ -28,7 +28,10 @@ class _NavBarState extends State<NavBar> {
                 );
               });
             },
-            icon: Icon(Icons.home_rounded),
+            icon: Icon(
+              Icons.home_rounded,
+              size: 35,
+            ),
           ),
           IconButton(
             onPressed: () {
@@ -39,7 +42,10 @@ class _NavBarState extends State<NavBar> {
                 );
               });
             },
-            icon: Icon(Icons.search_rounded),
+            icon: Icon(
+              Icons.search_rounded,
+              size: 35,
+            ),
           ),
           IconButton(
             onPressed: () {
@@ -50,7 +56,10 @@ class _NavBarState extends State<NavBar> {
                 );
               });
             },
-            icon: Icon(Icons.library_music_rounded),
+            icon: Icon(
+              Icons.library_music_rounded,
+              size: 33,
+            ),
           ),
           IconButton(
             onPressed: () {
@@ -61,7 +70,10 @@ class _NavBarState extends State<NavBar> {
                 );
               });
             },
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              size: 35,
+            ),
           ),
         ],
       ),

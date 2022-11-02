@@ -61,85 +61,94 @@ class _RectangleState extends State<Rectangle> {
     String iconName = widget.iconName;
     int x = widget.x;
     int y = widget.y;
-    return Padding(
-      padding: const EdgeInsets.all(20),
-      child: Container(
-        height: 120,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          gradient: colors[y],
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Container(
-                height: 100,
-                width: 100,
-                // height: 30,
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    iconName,
-                    height: 50,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Songs(name[x]),
+          ),
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Container(
+          height: 120,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: colors[y],
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      iconName,
+                      height: 50,
+                    ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Color(0xFF2B2D42),
-                  borderRadius: BorderRadius.circular(20),
+                  decoration: BoxDecoration(
+                    color: Color(0xFF2B2D42),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
               ),
-            ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 40),
-                  child: Text(
-                    name[x],
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40),
+                    child: Text(
+                      name[x],
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  height: 5,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 0, left: 5),
-                  child: Text(
-                    songNum[x].toString() + " " + name[x],
-                    style: TextStyle(
-                      color: Colors.white54,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                  Container(
+                    height: 5,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 0, left: 5),
+                    child: Text(
+                      songNum[x].toString() + " " + name[x],
+                      style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5),
-              child: IconButton(
-                iconSize: 40,
-                icon: Icon(
-                  Icons.navigate_next_rounded,
-                  color: Colors.black,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Songs(name[x]),
-                    ),
-                  );
-                },
+                ],
               ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: IconButton(
+                  iconSize: 40,
+                  icon: Icon(
+                    Icons.navigate_next_rounded,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Songs(name[x]),
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
