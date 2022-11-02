@@ -28,9 +28,9 @@ class Welcome extends StatelessWidget {
             child: Text(
               greeting(),
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Integral',
+                  // fontFamily: 'Integral',
                   color: Colors.white),
             ),
             color: Colors.transparent,

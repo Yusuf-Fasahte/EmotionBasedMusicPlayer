@@ -1,5 +1,5 @@
-import 'package:emplayer/Home/homititle.dart';
-import 'package:emplayer/Home/playlistlists.dart';
+import 'package:emplayer/home_page/homititle.dart';
+import 'package:emplayer/home_page/playlistlists.dart';
 import 'package:flutter/material.dart';
 
 class Playlists extends StatelessWidget {

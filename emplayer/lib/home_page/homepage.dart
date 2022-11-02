@@ -1,12 +1,11 @@
-import 'package:emplayer/Home/artistscovers.dart';
-import 'package:emplayer/Home/emotionbar.dart';
-import 'package:emplayer/Home/homititle.dart';
-import 'package:emplayer/Home/playlistsboxes.dart';
-import 'package:emplayer/Home/remixcovers.dart';
-import 'package:emplayer/Home/trendingsongs.dart';
-import 'package:emplayer/Home/wlcmsg.dart';
+import 'package:emplayer/home_page/artistscovers.dart';
+import 'package:emplayer/home_page/emotionbar.dart';
+import 'package:emplayer/home_page/homititle.dart';
+import 'package:emplayer/home_page/playlistsboxes.dart';
+import 'package:emplayer/home_page/remixcovers.dart';
+import 'package:emplayer/home_page/trendingsongs.dart';
+import 'package:emplayer/home_page/wlcmsg.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

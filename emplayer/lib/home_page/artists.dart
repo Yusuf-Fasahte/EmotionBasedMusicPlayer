@@ -24,11 +24,11 @@ class Artists extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
           child: Container(
             width: 120,
-            height: 30,
+            height: 35,
             child: Text(
               ArtistName,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             //color: Colors.green,
           ),

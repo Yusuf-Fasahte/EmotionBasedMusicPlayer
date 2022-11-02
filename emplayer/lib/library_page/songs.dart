@@ -1,6 +1,4 @@
-import 'dart:ffi';
-
-import 'package:emplayer/library/songcontain.dart';
+import 'package:emplayer/library_page/songcontain.dart';
 import 'package:flutter/material.dart';
 
 class Songs extends StatefulWidget {

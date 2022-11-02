@@ -1,4 +1,7 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:emplayer/account_page/account_page.dart';
+import 'package:emplayer/library_page/library.dart';
+import 'package:emplayer/main.dart';
+import 'package:emplayer/search_page/searchPage.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
@@ -9,40 +12,59 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int index = 0;
   @override
   Widget build(BuildContext context) {
-    return CurvedNavigationBar(
-      items: [
-        Icon(
-          Icons.home,
-          color: Colors.white,
-          size: 30,
-        ),
-        Icon(
-          Icons.search,
-          color: Colors.white,
-          size: 30,
-        ),
-        Icon(
-          Icons.all_inbox_rounded,
-          color: Colors.white,
-          size: 30,
-        ),
-        Icon(
-          Icons.settings,
-          color: Colors.white,
-          size: 30,
-        ),
-      ],
-      height: 55,
-      color: Color(0xFF282828),
-      backgroundColor: Colors.transparent,
-      buttonBackgroundColor: Colors.black,
-      index: index,
-      onTap: ((selectedindex) {
-        index = selectedindex;
-      }),
+    return Container(
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyApp()),
+                );
+              });
+            },
+            icon: Icon(Icons.home_rounded),
+          ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SearchTab()),
+                );
+              });
+            },
+            icon: Icon(Icons.search_rounded),
+          ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Library()),
+                );
+              });
+            },
+            icon: Icon(Icons.library_music_rounded),
+          ),
+          IconButton(
+            onPressed: () {
+              setState(() {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => account()),
+                );
+              });
+            },
+            icon: Icon(Icons.person),
+          ),
+        ],
+      ),
     );
   }
 }

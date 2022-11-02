@@ -1,6 +1,5 @@
-import 'package:emplayer/library/library.dart';
 import 'package:flutter/material.dart';
-import 'package:emplayer/Home/homepage.dart';
+import 'package:emplayer/home_page/homepage.dart';
 import 'package:emplayer/nav.dart';
 
 void main() {

@@ -1,4 +1,4 @@
-import 'package:emplayer/Home/artists.dart';
+import 'package:emplayer/home_page/artists.dart';
 import 'package:flutter/material.dart';
 
 class ArtistsCovers extends StatelessWidget {
@@ -35,7 +35,6 @@ class ArtistsCovers extends StatelessWidget {
           Artists(
               'https://upload.wikimedia.org/wikipedia/commons/e/e0/The_Weeknd_%28253662129%29.jpeg',
               'THE WEEKND'),
-          
         ],
       ),
     );

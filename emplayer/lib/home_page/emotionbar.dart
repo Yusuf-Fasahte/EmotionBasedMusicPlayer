@@ -1,3 +1,4 @@
+import 'package:emplayer/library_page/songs.dart';
 import 'package:flutter/material.dart';
 
 class Mood extends StatelessWidget {
@@ -9,7 +10,6 @@ class Mood extends StatelessWidget {
       padding: EdgeInsets.all(15),
       child: Container(
         decoration: BoxDecoration(
-          //color: Colors.pink,
           gradient: LinearGradient(
             colors: [
               Color(0xFF858e96),
@@ -18,7 +18,6 @@ class Mood extends StatelessWidget {
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            //stops: [0.2, 0.5, 0.6]
           ),
           borderRadius: BorderRadius.circular(40),
         ),
@@ -30,7 +29,7 @@ class Mood extends StatelessWidget {
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 30, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 30, 0, 0),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -52,6 +51,14 @@ class Mood extends StatelessWidget {
                   children: [
                     Container(
                       child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Songs('Pleasure'),
+                            ),
+                          );
+                        },
                         child: Text(
                           'PLEASURE',
                           textAlign: TextAlign.center,
@@ -62,7 +69,6 @@ class Mood extends StatelessWidget {
                               color: Colors.black),
                           //selectionColor: Colors.black,
                         ),
-                        onPressed: () {},
                       ),
                       decoration: BoxDecoration(
                           //color: Colors.amber,

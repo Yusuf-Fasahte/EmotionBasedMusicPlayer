@@ -1,10 +1,11 @@
-import 'package:emplayer/library/songs.dart';
+import 'package:emplayer/library_page/songs.dart';
 import 'package:flutter/material.dart';
 
 class Rectangle extends StatefulWidget {
   final int x;
   final String iconName;
-  Rectangle(this.x, this.iconName);
+  final int y;
+  Rectangle(this.x, this.iconName, this.y);
 
   @override
   State<Rectangle> createState() => _RectangleState();
@@ -13,25 +14,60 @@ class Rectangle extends StatefulWidget {
 class _RectangleState extends State<Rectangle> {
   List<String> name = [
     "Downloads",
-    "Favorite Songs",
+    "Favorites",
     "Saved Playlists",
     "Albums",
     "Liked Songs",
     "Playlist"
   ];
   List<int> songNum = [105, 1023, 23, 12, 23, 54];
+  final List<Gradient> colors = [
+    LinearGradient(colors: [
+      Color(0xFFFFCB6B),
+      Color(0xFF3D8BFF),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFF439CFB),
+      Color(0xFFF187FB),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFF1DBDE6),
+      Color(0xFFF1515E),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFFAEFB2A),
+      Color.fromARGB(255, 14, 134, 96),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFF42047E),
+      Color(0xFF07F49E),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFFFC9305),
+      Color(0xFFF20094),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFFAE1B1E),
+      Color(0xFFFC9F32),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    LinearGradient(colors: [
+      Color(0xFF9BAFD9),
+      Color(0xFF103783),
+    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    int x = widget.x;
     String iconName = widget.iconName;
+    int x = widget.x;
+    int y = widget.y;
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
         height: 120,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 242, 242, 242),
+          gradient: colors[y],
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
@@ -51,7 +87,7 @@ class _RectangleState extends State<Rectangle> {
                   ),
                 ),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 123, 0, 255),
+                  color: Color(0xFF2B2D42),
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
@@ -77,7 +113,7 @@ class _RectangleState extends State<Rectangle> {
                   child: Text(
                     songNum[x].toString() + " " + name[x],
                     style: TextStyle(
-                      color: Color.fromARGB(142, 102, 102, 102),
+                      color: Colors.white54,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
