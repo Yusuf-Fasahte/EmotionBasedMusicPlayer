@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class Songs extends StatefulWidget {
   final String name;
-  Songs(this.name);
+  Songs(this.name, {super.key});
 
   @override
   State<Songs> createState() => _SongsState();
@@ -20,18 +20,6 @@ class _SongsState extends State<Songs> {
             Container(
               height: 16,
             ),
-            // Align(
-            //   alignment: Alignment.topLeft,
-            //   child: IconButton(
-            //     iconSize: 30,
-            //     icon: Icon(
-            //       Icons.arrow_back_ios_new_rounded,
-            //     ),
-            //     onPressed: () {
-            //       Navigator.pop(context);
-            //     },
-            //   ),
-            // ),
             Padding(
               padding: EdgeInsets.only(top: 8, left: 48, bottom: 30),
               child: Container(

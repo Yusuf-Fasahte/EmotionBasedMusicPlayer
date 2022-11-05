@@ -5,26 +5,30 @@ class NowPlaying extends StatefulWidget {
   final String images;
   final String title;
   final String artist;
-  NowPlaying(this.images, this.title, this.artist);
+  NowPlaying(this.images, this.title, this.artist, {super.key});
 
   @override
   State<NowPlaying> createState() => _NowPlayingState();
 }
 
 class _NowPlayingState extends State<NowPlaying> {
+  bool flag1 = false;
+  bool flag2 = false;
+  bool flag3 = false;
+
   @override
   Widget build(BuildContext context) {
     String images = widget.images;
     String title = widget.title;
     String artist = widget.artist;
-    bool flag = false;
+    double _value = 25;
 
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             Container(
-              height: 90,
+              height: 75,
             ),
             Padding(
               padding: const EdgeInsets.all(40),
@@ -76,35 +80,65 @@ class _NowPlayingState extends State<NowPlaying> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Slider(
+                min: 0,
+                max: 100,
+                value: _value,
+                onChanged: (value) {
+                  setState(
+                    () {
+                      _value = value;
+                    },
+                  );
+                },
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Container(
-                  height: 10,
-                  width: 10,
+                SizedBox(height: 10, width: 10),
+                GestureDetector(
+                  onTap: () {
+                    setState(
+                      () {
+                        if (flag3)
+                          flag3 = false;
+                        else
+                          flag3 = true;
+                      },
+                    );
+                  },
+                  child: flag3
+                      ? Icon(
+                          Icons.repeat_on_rounded,
+                          size: 33,
+                        )
+                      : Icon(
+                          Icons.repeat_rounded,
+                          size: 33,
+                        ),
                 ),
-                Icon(
-                  Icons.repeat,
-                  size: 33,
-                ),
-                Container(
-                  height: 20,
-                  width: 20,
-                ),
+                SizedBox(height: 20, width: 20),
                 Icon(
                   Icons.skip_previous_rounded,
                   size: 40,
                 ),
                 GestureDetector(
                   onTap: () {
-                    if (flag) {
-                      flag = false;
-                    } else {
-                      flag = true;
-                    }
-                    log("message");
+                    setState(
+                      () {
+                        if (flag1) {
+                          flag1 = false;
+                        } else {
+                          flag1 = true;
+                        }
+                        log("message");
+                      },
+                    );
                   },
-                  child: flag
+                  child: flag1
                       ? Icon(
                           Icons.pause_circle_filled_rounded,
                           size: 70,
@@ -118,21 +152,21 @@ class _NowPlayingState extends State<NowPlaying> {
                   Icons.skip_next_rounded,
                   size: 40,
                 ),
-                Container(
-                  height: 20,
-                  width: 20,
-                ),
+                SizedBox(height: 20, width: 20),
                 GestureDetector(
                   onTap: () {
-                    if (flag) {
-                      flag = false;
-                    } else {
-                      flag = true;
-                    }
+                    setState(() {
+                      if (flag2) {
+                        flag2 = false;
+                      } else {
+                        flag2 = true;
+                      }
+                    });
                   },
-                  child: flag
+                  child: flag2
                       ? Icon(
                           Icons.favorite_rounded,
+                          color: Colors.red,
                           size: 33,
                         )
                       : Icon(
@@ -140,10 +174,7 @@ class _NowPlayingState extends State<NowPlaying> {
                           size: 33,
                         ),
                 ),
-                Container(
-                  height: 10,
-                  width: 10,
-                ),
+                SizedBox(height: 10, width: 10),
               ],
             ),
           ],

@@ -14,17 +14,6 @@ class Library extends StatelessWidget {
             Container(
               height: 16,
             ),
-            // Align(
-            //   alignment: Alignment.topLeft,
-            //   child: IconButton(
-            //       iconSize: 30,
-            //       icon: Icon(
-            //         Icons.arrow_back_ios_new_rounded,
-            //       ),
-            //       onPressed: () {
-            //         Navigator.pop(context);
-            //       }),
-            // ),
             Padding(
               padding: EdgeInsets.only(top: 30, left: 75, bottom: 20),
               child: Container(
@@ -43,12 +32,12 @@ class Library extends StatelessWidget {
             ),
             Column(
               children: [
-                Rectangle(0, "assets/images/icons/music.png",0),
-                Rectangle(1, "assets/images/icons/music.png",1),
-                Rectangle(2, "assets/images/icons/music.png",2),
-                Rectangle(3, "assets/images/icons/music.png",3),
-                Rectangle(4, "assets/images/icons/music.png",4),
-                Rectangle(5, "assets/images/icons/music.png",5),
+                Rectangle(0, "assets/images/icons/music.png", 0),
+                Rectangle(1, "assets/images/icons/music.png", 1),
+                Rectangle(2, "assets/images/icons/music.png", 2),
+                Rectangle(3, "assets/images/icons/music.png", 3),
+                Rectangle(4, "assets/images/icons/music.png", 4),
+                Rectangle(5, "assets/images/icons/music.png", 5),
               ],
             ),
           ],
