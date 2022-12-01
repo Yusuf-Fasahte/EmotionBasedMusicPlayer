@@ -47,12 +47,21 @@ class _settingState extends State<setting> {
   }
 
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
             backgroundColor: Color.fromARGB(255, 0, 0, 0),
             body: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Colors.black,
+                  Color.fromARGB(255, 67, 65, 65),
+                  Color.fromARGB(255, 101, 100, 100),
+                ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+              ),
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
@@ -79,43 +88,53 @@ class _settingState extends State<setting> {
                       )
                     ],
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 30, left: 10),
-                        child: Text(
-                          "Display Language",
-                          style: TextStyle(
-                              fontSize: 22,
+                  Container(
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 260,
+                          margin: EdgeInsets.only(top: 30, left: 10),
+                          child: Text(
+                            "Display Language",
+                            style: TextStyle(
+                                fontSize: 22,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 0.4),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 30,
+                            left: size.width - 380,
+                          ),
+                          child: Text(
+                            "English",
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Color.fromARGB(255, 150, 148, 148),
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 0.4),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 30,
+                            // left: size.width - 304,
+                          ),
+                          child: IconButton(
+                              icon: Icon(Icons.navigate_next_rounded),
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.4),
+                              iconSize: 30,
+                              onPressed: () {}),
                         ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 30, left: 115),
-                        child: Text(
-                          "English",
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color.fromARGB(255, 150, 148, 148),
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 0.4),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 30, left: 0),
-                        child: IconButton(
-                            icon: Icon(Icons.navigate_next_rounded),
-                            color: Colors.white,
-                            iconSize: 30,
-                            onPressed: () {}),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 5, left: 10),
                         child: Text(
                           "Equalizer",
@@ -127,7 +146,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 5, left: 235),
+                        margin: EdgeInsets.only(
+                          top: 5,
+                          left: size.width - 347,
+                        ),
                         child: Text(
                           "off",
                           style: TextStyle(
@@ -150,6 +172,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 5, left: 10),
                         child: Text(
                           "Sleep Timer",
@@ -161,7 +184,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 5, left: 205),
+                        margin: EdgeInsets.only(
+                          top: 5,
+                          left: size.width - 347,
+                        ),
                         child: Text(
                           "off",
                           style: TextStyle(
@@ -184,6 +210,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 20, left: 10),
                         child: Text(
                           "Lyrics",
@@ -195,7 +222,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 10, left: 264),
+                        margin: EdgeInsets.only(
+                          top: 10,
+                          left: size.width - 337,
+                        ),
                         height: 50,
 
                         child: FittedBox(
@@ -208,6 +238,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "Autoplay",
@@ -219,7 +250,9 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 235),
+                        margin: EdgeInsets.only(
+                          left: size.width - 337,
+                        ),
                         height: 50,
 
                         child: FittedBox(
@@ -232,6 +265,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "Dark Mode",
@@ -243,7 +277,9 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 214),
+                        margin: EdgeInsets.only(
+                          left: size.width - 337,
+                        ),
                         height: 50,
 
                         child: FittedBox(
@@ -256,6 +292,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "Data Saver",
@@ -267,9 +304,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 214),
+                        margin: EdgeInsets.only(
+                          left: size.width - 337,
+                        ),
                         height: 50,
-
                         child: FittedBox(
                           child: customSwitch(val4, onChangeFunction4),
                         ),
@@ -280,6 +318,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "Auto Adjust Quality",
@@ -291,9 +330,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 126),
+                        margin: EdgeInsets.only(
+                          left: size.width - 337,
+                        ),
                         height: 50,
-
                         child: FittedBox(
                           child: customSwitch(val5, onChangeFunction5),
                         ),
@@ -304,6 +344,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(top: 20, left: 10),
                         child: Text(
                           "Downloads",
@@ -315,7 +356,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20, left: 175),
+                        margin: EdgeInsets.only(
+                          top: 20,
+                          left: size.width - 387,
+                        ),
                         child: Text(
                           "215 MB",
                           style: TextStyle(
@@ -338,6 +382,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(left: 10),
                         child: Text(
                           "Download Setting",
@@ -349,7 +394,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0, left: 165),
+                        margin: EdgeInsets.only(
+                          top: 0,
+                          left: size.width - 329,
+                        ),
                         child: IconButton(
                             icon: Icon(Icons.navigate_next_rounded),
                             color: Colors.white,
@@ -376,13 +424,14 @@ class _settingState extends State<setting> {
                     margin:
                         EdgeInsets.only(top: 12, left: 4, right: 4, bottom: 10),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 31, 32, 32),
+                      color: Color.fromARGB(255, 59, 59, 59),
                       borderRadius: BorderRadius.circular(14),
                     ),
                   ),
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(left: 10),
                         child: Text(
                           "Mobile Notifications",
@@ -394,7 +443,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0, left: 155),
+                        margin: EdgeInsets.only(
+                          top: 0,
+                          left: size.width - 329,
+                        ),
                         child: IconButton(
                             icon: Icon(Icons.navigate_next_rounded),
                             color: Colors.white,
@@ -406,6 +458,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(left: 10),
                         child: Text(
                           "Email Notifications",
@@ -417,7 +470,10 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0, left: 166),
+                        margin: EdgeInsets.only(
+                          top: 0,
+                          left: size.width - 329,
+                        ),
                         child: IconButton(
                             icon: Icon(Icons.navigate_next_rounded),
                             color: Colors.white,
@@ -429,6 +485,7 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+                        width: 260,
                         margin: EdgeInsets.only(left: 10),
                         child: Text(
                           "Terms & Privacy",
@@ -440,7 +497,7 @@ class _settingState extends State<setting> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 0, left: 191),
+                        margin: EdgeInsets.only(top: 0, left: size.width - 329),
                         child: IconButton(
                             icon: Icon(Icons.navigate_next_rounded),
                             color: Colors.white,

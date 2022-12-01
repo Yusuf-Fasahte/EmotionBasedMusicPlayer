@@ -15,38 +15,47 @@ class _editgenderState extends State<editgender> {
       home: SafeArea(
           child: Scaffold(
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        body: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  child: IconButton(
-                      icon: Icon(Icons.navigate_before_rounded),
-                      color: Colors.white,
-                      iconSize: 46,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      }),
-                ),
-                Container(
-                  child: Text(
-                    "Edit Gender",
-                    style: TextStyle(
-                        fontSize: 26,
+        body: Container(
+            decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Colors.black,
+              Color.fromARGB(255, 59, 59, 59),
+              Color.fromARGB(255, 100, 100, 100),
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+          ),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    child: IconButton(
+                        icon: Icon(Icons.navigate_before_rounded),
                         color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.4),
+                        iconSize: 46,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        }),
                   ),
-                ),
-              ],
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 150),
-              width: 385,
-              height: 120,
-              child: MyCustomForm(),
-            )
-          ],
+                  Container(
+                    child: Text(
+                      "Edit Gender",
+                      style: TextStyle(
+                          fontSize: 26,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.4),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 150),
+                width: 385,
+                height: 120,
+                child: MyCustomForm(),
+              )
+            ],
+          ),
         ),
       )),
     );
@@ -69,8 +78,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
           child: TextField(
-          
-
             style: TextStyle(
                 color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
             autofocus: true,
