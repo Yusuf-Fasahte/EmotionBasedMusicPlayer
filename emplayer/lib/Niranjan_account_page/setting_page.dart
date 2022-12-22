@@ -11,9 +11,9 @@ class setting extends StatefulWidget {
 class _settingState extends State<setting> {
   @override
   bool val1 = true;
-  bool val2 = true;
+  bool val2 = false;
   bool val3 = true;
-  bool val4 = true;
+  bool val4 = false;
   bool val5 = true;
 
   onChangeFunction1(bool newValue1) {
@@ -50,6 +50,7 @@ class _settingState extends State<setting> {
     Size size = MediaQuery.of(context).size;
 
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Poppins-Regular'),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
@@ -57,14 +58,25 @@ class _settingState extends State<setting> {
             body: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                   Colors.black,
                   Color.fromARGB(255, 67, 65, 65),
                   Color.fromARGB(255, 101, 100, 100),
+=======
+                  Color.fromARGB(255, 0, 0, 0),
+                  Color.fromARGB(255, 24, 24, 24),
+                  Color.fromARGB(255, 82, 82, 82),
+                  Color.fromARGB(255, 24, 24, 24),
+                  Color.fromARGB(255, 0, 0, 0),
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                 ], begin: Alignment.topLeft, end: Alignment.bottomRight),
               ),
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     children: [
                       Container(
@@ -81,6 +93,7 @@ class _settingState extends State<setting> {
                           "Account Setting",
                           style: TextStyle(
                               fontSize: 26,
+                              fontFamily: 'Right',
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -92,26 +105,47 @@ class _settingState extends State<setting> {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           width: 260,
+=======
+                          // color: Colors.red,
+                          width: 220,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                           margin: EdgeInsets.only(top: 30, left: 10),
                           child: Text(
                             "Display Language",
                             style: TextStyle(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                                 fontSize: 22,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
+=======
+                                fontSize: 18,
+                                fontFamily: 'Poppins-Regular',
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                                 letterSpacing: 0.4),
                           ),
                         ),
                         Container(
                           margin: EdgeInsets.only(
                             top: 30,
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                             left: size.width - 380,
+=======
+                            left: size.width - 335,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                           ),
                           child: Text(
                             "English",
                             style: TextStyle(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                                 fontSize: 16,
+=======
+                                fontSize: 13,
+                                fontFamily: 'Poppins-Regular',
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                                 color: Color.fromARGB(255, 150, 148, 148),
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 0.4),
@@ -139,22 +173,28 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Equalizer",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'Poppins-Regular',
                               letterSpacing: 0.4),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(
                           top: 5,
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 347,
+=======
+                          left: size.width - 343,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         child: Text(
                           "off",
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: Color.fromARGB(255, 150, 148, 148),
+                              fontFamily: 'Poppins-Regular',
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
                         ),
@@ -177,8 +217,9 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Sleep Timer",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
+                              fontFamily: 'Poppins-Regular',
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
                         ),
@@ -186,14 +227,19 @@ class _settingState extends State<setting> {
                       Container(
                         margin: EdgeInsets.only(
                           top: 5,
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 347,
+=======
+                          left: size.width - 343,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         child: Text(
                           "off",
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: Color.fromARGB(255, 150, 148, 148),
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'Poppins-Regular',
                               letterSpacing: 0.4),
                         ),
                       ),
@@ -211,25 +257,48 @@ class _settingState extends State<setting> {
                     children: [
                       Container(
                         width: 260,
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                         margin: EdgeInsets.only(top: 20, left: 10),
+=======
+                        margin: EdgeInsets.only(left: 10, top: 10),
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         child: Text(
                           "Lyrics",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 19,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'Poppins-Regular',
                               letterSpacing: 0.4),
                         ),
                       ),
                       Container(
                         margin: EdgeInsets.only(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           top: 10,
                           left: size.width - 337,
+=======
+                          left: size.width - 343,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         height: 50,
 
-                        child: FittedBox(
-                          child: customSwitch(val1, onChangeFunction1),
+                        child: Transform.scale(
+                          scale: 1.1,
+                          child: Switch(
+                            value: val1,
+                            onChanged: (onChanged) {
+                              setState(() {
+                                val1 = onChanged;
+                              });
+                            },
+                            activeColor: Color.fromARGB(255, 178, 178, 178),
+                            inactiveTrackColor:
+                                Color.fromARGB(255, 0, 255, 255),
+                            thumbColor: MaterialStateProperty.all(val1
+                                ? Color.fromARGB(255, 255, 255, 255)
+                                : Color.fromARGB(255, 255, 255, 255)),
+                          ),
                         ),
                         // customSwitch('Abcd', val2, onChangeFunction2),
                       ),
@@ -243,7 +312,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Autoplay",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -251,12 +320,30 @@ class _settingState extends State<setting> {
                       ),
                       Container(
                         margin: EdgeInsets.only(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 337,
+=======
+                          left: size.width - 343,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         height: 50,
 
-                        child: FittedBox(
-                          child: customSwitch(val2, onChangeFunction2),
+                        child: Transform.scale(
+                          scale: 1.1,
+                          child: Switch(
+                            value: val2,
+                            onChanged: (onChanged) {
+                              setState(() {
+                                val2 = onChanged;
+                              });
+                            },
+                            activeColor: Color.fromARGB(255, 178, 178, 178),
+                            inactiveTrackColor:
+                                Color.fromARGB(255, 0, 255, 255),
+                            thumbColor: MaterialStateProperty.all(val2
+                                ? Color.fromARGB(255, 255, 255, 255)
+                                : Color.fromARGB(255, 255, 255, 255)),
+                          ),
                         ),
                         // customSwitch('Abcd', val2, onChangeFunction2),
                       ),
@@ -270,7 +357,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Dark Mode",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -278,12 +365,30 @@ class _settingState extends State<setting> {
                       ),
                       Container(
                         margin: EdgeInsets.only(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 337,
+=======
+                          left: size.width - 343,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         height: 50,
 
-                        child: FittedBox(
-                          child: customSwitch(val3, onChangeFunction3),
+                        child: Transform.scale(
+                          scale: 1.1,
+                          child: Switch(
+                            value: val3,
+                            onChanged: (onChanged) {
+                              setState(() {
+                                val3 = onChanged;
+                              });
+                            },
+                            activeColor: Color.fromARGB(255, 178, 178, 178),
+                            inactiveTrackColor:
+                                Color.fromARGB(255, 0, 255, 255),
+                            thumbColor: MaterialStateProperty.all(val3
+                                ? Color.fromARGB(255, 255, 255, 255)
+                                : Color.fromARGB(255, 255, 255, 255)),
+                          ),
                         ),
                         // customSwitch('Abcd', val2, onChangeFunction2),
                       ),
@@ -297,7 +402,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Data Saver",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -305,11 +410,34 @@ class _settingState extends State<setting> {
                       ),
                       Container(
                         margin: EdgeInsets.only(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 337,
                         ),
                         height: 50,
                         child: FittedBox(
                           child: customSwitch(val4, onChangeFunction4),
+=======
+                          left: size.width - 338,
+                        ),
+                        height: 50,
+
+                        child: Transform.scale(
+                          scale: 1.1,
+                          child: Switch(
+                            value: val4,
+                            onChanged: (onChanged) {
+                              setState(() {
+                                val4 = onChanged;
+                              });
+                            },
+                            activeColor: Color.fromARGB(255, 178, 178, 178),
+                            inactiveTrackColor:
+                                Color.fromARGB(255, 0, 255, 255),
+                            thumbColor: MaterialStateProperty.all(val4
+                                ? Color.fromARGB(255, 255, 255, 255)
+                                : Color.fromARGB(255, 255, 255, 255)),
+                          ),
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         // customSwitch('Abcd', val2, onChangeFunction2),
                       ),
@@ -318,12 +446,17 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                         width: 260,
+=======
+                        // color: Colors.red,
+                        width: 220,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "Auto Adjust Quality",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -331,11 +464,34 @@ class _settingState extends State<setting> {
                       ),
                       Container(
                         margin: EdgeInsets.only(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 337,
                         ),
                         height: 50,
                         child: FittedBox(
                           child: customSwitch(val5, onChangeFunction5),
+=======
+                          left: size.width - 303,
+                        ),
+                        height: 50,
+
+                        child: Transform.scale(
+                          scale: 1.1,
+                          child: Switch(
+                            value: val5,
+                            onChanged: (onChanged) {
+                              setState(() {
+                                val5 = onChanged;
+                              });
+                            },
+                            activeColor: Color.fromARGB(255, 178, 178, 178),
+                            inactiveTrackColor:
+                                Color.fromARGB(255, 0, 255, 255),
+                            thumbColor: MaterialStateProperty.all(val5
+                                ? Color.fromARGB(255, 255, 255, 255)
+                                : Color.fromARGB(255, 255, 255, 255)),
+                          ),
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         // customSwitch('Abcd', val2, onChangeFunction2),
                       ),
@@ -344,12 +500,17 @@ class _settingState extends State<setting> {
                   Row(
                     children: [
                       Container(
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                         width: 260,
+=======
+                        // color: Colors.red,
+                        width: 220,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         margin: EdgeInsets.only(top: 20, left: 10),
                         child: Text(
                           "Downloads",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -358,12 +519,16 @@ class _settingState extends State<setting> {
                       Container(
                         margin: EdgeInsets.only(
                           top: 20,
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/setting_page.dart
                           left: size.width - 387,
+=======
+                          left: size.width - 342,
+>>>>>>> Stashed changes:emplayer/lib/account_page/setting_page.dart
                         ),
                         child: Text(
                           "215 MB",
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: Color.fromARGB(255, 150, 148, 148),
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -387,7 +552,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Download Setting",
                           style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -413,7 +578,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Notifications",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 19,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
@@ -423,6 +588,7 @@ class _settingState extends State<setting> {
                     height: 33,
                     margin:
                         EdgeInsets.only(top: 12, left: 4, right: 4, bottom: 10),
+                        
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 59, 59, 59),
                       borderRadius: BorderRadius.circular(14),
@@ -436,7 +602,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Mobile Notifications",
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 17,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -463,7 +629,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Email Notifications",
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 17,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),
@@ -490,7 +656,7 @@ class _settingState extends State<setting> {
                         child: Text(
                           "Terms & Privacy",
                           style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 17,
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 0.4),

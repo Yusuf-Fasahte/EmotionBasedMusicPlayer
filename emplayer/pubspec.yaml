@@ -29,7 +29,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_native_splash: ^2.2.16
+  
   flutter:
+  
     sdk: flutter
 
 
@@ -39,23 +42,45 @@ dependencies:
   animated_text_kit: ^4.2.2
   image_picker: ^0.8.6
 
+
 dev_dependencies:
+  # flutter_native_splash: ^2.2.16
+
   flutter_test:
     sdk: flutter
+  http: 0.13.3
+  flutter_lints: ^2.0.0
+
+  flutter_launcher_icons: "^0.11.0"
+
+  # THIS IS OF NO USE ,,,,,,,,,, ______________________________________________USE WEBSITE FLUTTER LAUNCHER ICON GENERATOR________________________________________________________________
+flutter_icons:
+  image_path:"assets/images/icons/logoo.png"
+  android:true
+  ios:true
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
-
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+# flutter_native_splash:
+#   color:"#ffffff"
+#   image:assets/images/icons/logoo.png
+#   android:true
+#   ios:true
 flutter:
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -86,6 +111,7 @@ flutter:
   #       - asset: fonts/Schyler-Regular.ttf
 =======
   fonts:
+<<<<<<< Updated upstream
     - family: Right
       fonts:
         - asset: assets/fonts/Right.ttf
@@ -93,6 +119,19 @@ flutter:
     - family: Lobster
       fonts:
         - asset: assets/fonts/Lobster.ttf
+=======
+    - family: Poppins-Medium
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+        
+    - family: Poppins-Regular 
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+    - family: Right
+      fonts:
+        - asset: assets/fonts/Right.ttf
+>>>>>>> Stashed changes
 
     - family: Quantify
       fonts:
@@ -122,3 +161,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  
