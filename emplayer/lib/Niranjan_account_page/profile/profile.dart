@@ -7,47 +7,18 @@ import 'edit_gender.dart';
 import 'edit_gmail.dart';
 import 'edit_name.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:image_picker/image_picker.dart';
 
-class profile_page extends StatefulWidget {
-  String username;
+class profile_page extends StatelessWidget {
+  const profile_page({super.key});
 
-  profile_page({required this.username});
-
-  @override
-  State<profile_page> createState() => _profile_pageState();
-}
-
-class _profile_pageState extends State<profile_page> {
-  int temp = 0;
-  // File galleryFile;
   @override
   Widget build(BuildContext context) {
-    // imageSelectorGallery() async {
-    //   galleryFile = await ImagePicker.pickImage(
-    //     source: ImageSource.Pgallery,
-    //     // maxHeight: 50.0,
-    //     // maxWidth: 50.0,
-    //   );
-    //   setState(() {});
-    // }
-
-    Size size = MediaQuery.of(context).size;
-    // if (temp > 0)
-
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
             backgroundColor: Color.fromARGB(255, 0, 0, 0),
             body: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-                  Colors.black,
-                  Color.fromARGB(255, 63, 62, 62),
-                  Color.fromARGB(255, 99, 98, 98),
-                ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-              ),
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
@@ -85,8 +56,7 @@ class _profile_pageState extends State<profile_page> {
                           alignment: Alignment.center,
                           width: 130,
                           height: 130,
-                          margin:
-                              EdgeInsets.only(top: 27, left: size.width / 3),
+                          margin: EdgeInsets.only(top: 27, left: 140),
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.cover,
@@ -98,7 +68,6 @@ class _profile_pageState extends State<profile_page> {
                       ],
                     ),
                   ),
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/profile/profile.dart
                   Container(
                     margin: EdgeInsets.only(left: 75, top: 10),
                     child: Center(
@@ -121,34 +90,10 @@ class _profile_pageState extends State<profile_page> {
                         ),
                       ),
                     )),
-=======
-                  SizedBox(
-                    height: 8,
->>>>>>> Stashed changes:emplayer/lib/account_page/profile/profile.dart
                   ),
-                  Center(
-                      child: SizedBox(
-                    // width: 250.0,
-                    child: DefaultTextStyle(
-                      style: const TextStyle(
-                        fontSize: 27,
-                        fontFamily: 'Agne',
-                      ),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          for (int i = 0; i < 10; i++)
-                            TypewriterAnimatedText(widget.username),
-                        ],
-                        onTap: () {
-                          print(widget.username.length);
-                        },
-                      ),
-                    ),
-                  )),
                   Row(
                     children: [
                       Container(
-                          width: 220,
                           alignment: Alignment.centerLeft,
                           margin:
                               EdgeInsets.only(left: 10, top: 30, bottom: 20),
@@ -163,20 +108,24 @@ class _profile_pageState extends State<profile_page> {
                             ),
                           )),
                       Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            borderRadius: BorderRadius.circular(50)),
-                        margin: EdgeInsets.only(
-                            top: 30, left: size.width - 300, bottom: 20),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Image.asset(
-                            'assets/images/icons/add-photo.png',
-                            color: Color.fromARGB(255, 67, 66, 66),
-                            width: 29,
-                          ),
-                        ),
-                      ),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              borderRadius: BorderRadius.circular(50)),
+                          margin:
+                              EdgeInsets.only(top: 30, left: 195, bottom: 20),
+                          child: IconButton(
+                            onPressed: () => null,
+                            icon: Image.asset(
+                              'assets/images/add-photo.png',
+                              color: Color.fromARGB(255, 67, 66, 66),
+                              width: 29,
+                            ),
+                            // icon: Icon(
+                            //   Icons.add_a_photo_rounded,
+                            //   size: 26,
+                            //   color: Color.fromARGB(255, 75, 75, 75),
+                            // )
+                          )),
                     ],
                   ),
                   Container(
@@ -195,11 +144,9 @@ class _profile_pageState extends State<profile_page> {
                     child: Row(
                       children: [
                         Container(
-                          width: 300,
-                          // color: Colors.red,
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
-                            widget.username,
+                            "Ryan Reynolds",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontSize: 19),
@@ -211,10 +158,7 @@ class _profile_pageState extends State<profile_page> {
                                 builder: (context) => editname()));
                           }),
                           child: Container(
-                            // width: 110,
-                            // color: Colors.red,
-                            // alignment: Alignment.centerRight,
-                            margin: EdgeInsets.only(left: size.width - 383),
+                            margin: EdgeInsets.only(left: 212),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -248,7 +192,6 @@ class _profile_pageState extends State<profile_page> {
                     child: Row(
                       children: [
                         Container(
-                          width: 300,
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "xxxxxxx811",
@@ -263,7 +206,7 @@ class _profile_pageState extends State<profile_page> {
                                 builder: (context) => editcontact()));
                           }),
                           child: Container(
-                            margin: EdgeInsets.only(left: size.width - 383),
+                            margin: EdgeInsets.only(left: 238),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -297,7 +240,6 @@ class _profile_pageState extends State<profile_page> {
                     child: Row(
                       children: [
                         Container(
-                          width: 300,
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "MRANDERSON@GAMIL.COM",
@@ -312,7 +254,7 @@ class _profile_pageState extends State<profile_page> {
                                 builder: (context) => editgmail()));
                           }),
                           child: Container(
-                            margin: EdgeInsets.only(left: size.width - 383),
+                            margin: EdgeInsets.only(left: 87),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -346,7 +288,6 @@ class _profile_pageState extends State<profile_page> {
                     child: Row(
                       children: [
                         Container(
-                          width: 300,
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "19",
@@ -361,7 +302,7 @@ class _profile_pageState extends State<profile_page> {
                                 builder: (context) => editage()));
                           }),
                           child: Container(
-                            margin: EdgeInsets.only(left: size.width - 383),
+                            margin: EdgeInsets.only(left: 314),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -395,7 +336,6 @@ class _profile_pageState extends State<profile_page> {
                     child: Row(
                       children: [
                         Container(
-                          width: 300,
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "MALE",
@@ -410,7 +350,7 @@ class _profile_pageState extends State<profile_page> {
                                 builder: (context) => editgender()));
                           }),
                           child: Container(
-                            margin: EdgeInsets.only(left: size.width - 383),
+                            margin: EdgeInsets.only(left: 285),
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -463,11 +403,7 @@ class _LargeimgState extends State<Largeimg> {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/profile/profile.dart
                         'https://c4.wallpaperflare.com/wallpaper/285/215/820/red-weapons-fiction-mask-wallpaper-preview.jpg')),
-=======
-   'http://m.gettywallpapers.com/wp-content/uploads/2021/02/Naruto-HD-Wallpaper-Download.jpg')),
->>>>>>> Stashed changes:emplayer/lib/account_page/profile/profile.dart
                 color: Color.fromARGB(255, 255, 16, 16),
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -477,15 +413,3 @@ class _LargeimgState extends State<Largeimg> {
     );
   }
 }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return new MaterialApp(
-//       home: new GalleryAccess(),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
-
-

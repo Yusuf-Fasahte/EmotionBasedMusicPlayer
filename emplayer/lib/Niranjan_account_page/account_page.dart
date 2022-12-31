@@ -12,49 +12,12 @@ class account extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
           backgroundColor: Color.fromARGB(255, 0, 0, 0),
           body: Column(children: [
-=======
-    const colorizeColors = [
-      Color.fromARGB(255, 235, 122, 255),
-      Colors.yellow,
-      Colors.blue,
-      Colors.yellow,
-      Colors.red,
-//  Color.fromARGB(255, 251, 255, 0),
-    ];
-
-    const colorizeTextStyle = TextStyle(
-      decoration: TextDecoration.none,
-      fontSize: 33.0,
-      letterSpacing: 0.3,
-      // fontWeight: FontWeight.bold,
-
-      fontFamily: 'Right',
-    );
-
-    Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 0, 0, 0),
-      body: SafeArea(
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 72, 72, 72),
-              Color.fromARGB(255, 0, 0, 0),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-          ),
-          child: Column(children: [
-            Container(
-              height: 16,
-            ),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
             Container(
               child: Row(children: [
                 Container(
@@ -78,7 +41,6 @@ class account extends StatelessWidget {
                 )
               ]),
             ),
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
             GestureDetector(
               onTap: (() {
                 Navigator.of(context)
@@ -123,147 +85,27 @@ class account extends StatelessWidget {
                   ),
                 ),
               )),
-=======
+            ),
             Container(
-              margin: EdgeInsets.only(top: 30, bottom: 30),
+              margin: EdgeInsets.only(top: 40, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: Row(
                 children: [
                   Container(
-                    // alignment: Alignment.centerLeft,
-                    child: GestureDetector(
-                      onTap: (() {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Largeimg()));
-                      }),
-                      child: Container(
-                        // alignment: Alignment.centerLeft,
-                        width: 80,
-                        height: 80,
-
-                        // width: 90,
-                        // height: 90,
-                        margin: EdgeInsets.only(right: 17, left: 20),
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmVlbCUyMGdvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60s")),
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(100)),
-                      ),
-                    ),
-                  ),
-
-                  Container(
-                    width: 250.0,
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                        ColorizeAnimatedText(
-                          'Username',
-                          textStyle: colorizeTextStyle,
-                          colors: colorizeColors,
-                        ),
-                      ],
-                      isRepeatingAnimation: true,
-                      onTap: () {
-                        print("Tap Event");
-                      },
-                    ),
-                  )
-                  // Container(
-                  //   // alignment: Alignment.centerLeft,
-                  //   margin: EdgeInsets.only(),
-                  //   child: SizedBox(
-                  //     child: DefaultTextStyle(
-                  //       style: const TextStyle(
-                  //         fontSize: 28,
-                  //         fontFamily: 'Agne',
-                  //       ),
-                  //       child: AnimatedTextKit(
-                  //         animatedTexts: [
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //           TypewriterAnimatedText('Username'),
-                  //         ],
-                  //         onTap: () {
-                  //           print("Tap Event");
-                  //         },
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                ],
-              ),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Container(
-              height: 45,
-              margin: EdgeInsets.only(top: 30, left: 7, right: 6, bottom: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 255, 255, 255)),
-                  // color: Color.fromARGB(255, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10)),
-              child: Row(
-                children: [
-                  Container(
-                    width: 50,
-                    // height: 50,
                     child: Icon(
                       Icons.person,
-                      size: 28,
+                      size: 31,
                       color: Colors.white,
                     ),
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(top: 0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   Container(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                       margin: EdgeInsets.only(left: 10, top: 0),
                       child: Text(
                         "My Profile",
@@ -280,38 +122,15 @@ class account extends StatelessWidget {
                     height: 50,
                     margin: EdgeInsets.only(top: 0, left: 185),
                     alignment: Alignment.center,
-=======
-                    width: 280,
-                    // color: Colors.red,
-                    // alignment: Alignment.centerLeft,
-
-                    // margin: EdgeInsets.only(left: s10),
-                    child: Text(
-                      " My Profile",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        wordSpacing: 0,
-                        letterSpacing: 1.2,
-                        fontSize: 19,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: size.width - 400),
-                    // alignment: Alignment.center,
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                     child: IconButton(
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
-                      iconSize: 30,
+                      iconSize: 44,
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => profile_page(
-                              username: "",
-                            ),
+                            builder: (context) => profile_page(),
                           ),
                         );
                       },
@@ -324,12 +143,9 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-              height: 45,
-              margin: EdgeInsets.only(left: 7, right: 5, bottom: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 255, 255, 255)),
-                  // color: Color.fromARGB(255, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10)),
+              margin: EdgeInsets.only(top: 2, left: 7, right: 5),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: Row(
                 children: [
                   Container(
@@ -338,16 +154,10 @@ class account extends StatelessWidget {
                     margin: EdgeInsets.only(top: 0),
                     alignment: Alignment.center,
                     child: Image.asset(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                       'assets/images/setting2.png',
                       width: 26,
                       height: 26,
 
-=======
-                      'assets/images/icons/setting2.png',
-                      width: 22,
-                      height: 22,
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                       fit: BoxFit.fill,
                       // fit: BoxFit.fill,
                     ),
@@ -356,31 +166,26 @@ class account extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      width: 280,
-                      // margin: EdgeInsets.only(left: size.width / 21),
+                      margin: EdgeInsets.only(left: 10, top: 0),
                       child: Text(
-                        " Account Setting",
+                        "Account Setting",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 19,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                     width: 50,
                     height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                     margin: EdgeInsets.only(top: 0, left: 126),
-=======
-                    margin: EdgeInsets.only(left: size.width - 400),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                     alignment: Alignment.center,
                     child: IconButton(
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
-                      iconSize: 30,
+                      iconSize: 44,
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => setting()));
@@ -394,12 +199,9 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-              height: 45,
-              margin: EdgeInsets.only(top: 2, left: 7, right: 6, bottom: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 255, 255, 255)),
-                  // color: Color.fromARGB(255, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10)),
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: Row(
                 children: [
                   Container(
@@ -409,7 +211,7 @@ class account extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Icon(
                       Icons.history_rounded,
-                      size: 28,
+                      size: 32,
                       color: Colors.white,
                     ),
                     // child: Image.asset(
@@ -425,30 +227,26 @@ class account extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      width: 280,
+                      margin: EdgeInsets.only(left: 10, top: 0),
                       child: Text(
-                        " History & Privacy",
+                        "History & Privacy",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           wordSpacing: 2.5,
                           letterSpacing: 1.2,
-                          fontSize: 19,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                     width: 50,
                     height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                     margin: EdgeInsets.only(top: 0, left: 107),
-=======
-                    margin: EdgeInsets.only(left: size.width - 400),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                     alignment: Alignment.center,
                     child: IconButton(
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
-                      iconSize: 30,
+                      iconSize: 44,
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => History()));
@@ -462,12 +260,9 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-              height: 45,
-              margin: EdgeInsets.only(top: 2, left: 7, right: 6, bottom: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 255, 255, 255)),
-                  // color: Color.fromARGB(255, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10)),
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: Row(
                 children: [
                   Container(
@@ -477,7 +272,7 @@ class account extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Icon(
                       Icons.headphones,
-                      size: 26,
+                      size: 28,
                       color: Colors.white,
                     ),
                     decoration: BoxDecoration(
@@ -485,30 +280,26 @@ class account extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      width: 280,
+                      margin: EdgeInsets.only(left: 10, top: 0),
                       child: Text(
-                        " Help & Support",
+                        "Help & Support",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 19,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                     width: 50,
                     height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                     margin: EdgeInsets.only(top: 0, left: 134),
-=======
-                    margin: EdgeInsets.only(left: size.width - 400),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                     alignment: Alignment.center,
                     child: IconButton(
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
-                      iconSize: 30,
+                      iconSize: 44,
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => help()));
@@ -522,22 +313,19 @@ class account extends StatelessWidget {
               ),
             ),
             Container(
-              height: 45,
-              margin: EdgeInsets.only(top: 2, left: 7, right: 6, bottom: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Color.fromARGB(255, 255, 255, 255)),
-                  // color: Color.fromARGB(255, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(10)),
+              margin: EdgeInsets.only(top: 2, left: 7, right: 6),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: Row(
                 children: [
                   Container(
                     width: 50,
                     height: 50,
-                    margin: EdgeInsets.only(left: 5),
+                    margin: EdgeInsets.only(top: 0),
                     alignment: Alignment.center,
                     child: Icon(
                       Icons.logout_rounded,
-                      size: 27,
+                      size: 29,
                       color: Colors.white,
                     ),
                     // child: Image.asset(
@@ -553,70 +341,27 @@ class account extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      width: 280,
+                      margin: EdgeInsets.only(left: 10, top: 0),
                       child: Text(
-                        " Logout",
+                        "Logout",
                         style: TextStyle(
                           fontWeight: FontWeight.w700,
                           wordSpacing: 10,
                           letterSpacing: 1.2,
-                          fontSize: 19,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                     width: 50,
                     height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/account_page.dart
                     margin: EdgeInsets.only(top: 0, left: 218),
-=======
-                    margin: EdgeInsets.only(left: size.width - 400),
->>>>>>> Stashed changes:emplayer/lib/account_page/account_page.dart
                     alignment: Alignment.center,
                     child: IconButton(
                       icon: const Icon(Icons.navigate_next_rounded),
                       color: Color.fromARGB(255, 255, 255, 255),
-                      iconSize: 30,
-                      onPressed: () {
-                        showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                // Retrieve the text the that user has entered by using the
-                                // TextEditingController.
-                                content: Container(
-                                  height: 33,
-                                  width: 300,
-                                  // margin: EdgeInsets.only(top: 200),
-                                  child: Center(
-                                      child: SizedBox(
-                                    width: 400.0,
-                                    child: DefaultTextStyle(
-                                      style: TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255),
-                                        fontSize: 30.0,
-                                        fontFamily: 'Agne',
-                                      ),
-                                      child: AnimatedTextKit(
-                                        animatedTexts: [
-                                          TypewriterAnimatedText(
-                                              'Under Process'),
-                                          TypewriterAnimatedText(
-                                              'Working in Progress'),
-                                          TypewriterAnimatedText(
-                                              'Under Process'),
-                                        ],
-                                        onTap: () {
-                                          print("Tap Event");
-                                        },
-                                      ),
-                                    ),
-                                  )),
-                                ),
-                              );
-                            });
-                      },
+                      iconSize: 44,
+                      onPressed: () {},
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -625,6 +370,12 @@ class account extends StatelessWidget {
                 ],
               ),
             ),
+            // Container(
+            //   width: 100S,
+            //   height: 100,
+            //   margin: EdgeInsets.only(top: 10),
+            //   color: Color.fromARGB(255, 0, 255, 200),
+            // )
           ]),
         ),
       ),

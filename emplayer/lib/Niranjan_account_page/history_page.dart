@@ -3,7 +3,7 @@ import 'setting_page.dart';
 
 class History extends StatefulWidget {
   const History({super.key});
-
+  
   @override
   State<History> createState() => _HistoryState();
 }
@@ -47,8 +47,6 @@ class _HistoryState extends State<History> {
   }
 
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SafeArea(
@@ -94,7 +92,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 30, left: size.width - 242),
+                    margin: EdgeInsets.only(top: 30, left: 175),
                     child: Text(
                       "Clear",
                       style: TextStyle(
@@ -120,7 +118,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 27, left: size.width - 266),
+                    margin: EdgeInsets.only(top: 27, left: 152),
                     child: Text(
                       "Clear",
                       style: TextStyle(
@@ -146,7 +144,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 12, left: size.width - 265),
+                    margin: EdgeInsets.only(top: 12, left: 155),
                     height: 50,
 
                     child: FittedBox(
@@ -170,7 +168,7 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 10, left: size.width - 294),
+                    margin: EdgeInsets.only(top: 10, left: 128),
                     height: 50,
 
                     child: FittedBox(
@@ -197,7 +195,7 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
-                      margin: EdgeInsets.only(top: 20, left: size.width - 290),
+                      margin: EdgeInsets.only(top: 20, left: 126),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -224,7 +222,7 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
-                      margin: EdgeInsets.only(top: 8, left: size.width - 255),
+                      margin: EdgeInsets.only(top: 8, left: 161),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -251,7 +249,7 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
-                      margin: EdgeInsets.only(top: 10, left: size.width - 205),
+                      margin: EdgeInsets.only(top: 10, left: 211),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -278,7 +276,7 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
-                      margin: EdgeInsets.only(top: 8, left: size.width - 275),
+                      margin: EdgeInsets.only(top: 8, left: 142),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -305,7 +303,7 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
-                      margin: EdgeInsets.only(top: 10, left: size.width - 182),
+                      margin: EdgeInsets.only(top: 10, left: 233),
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
