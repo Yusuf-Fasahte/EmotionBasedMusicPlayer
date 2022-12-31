@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'setting_page.dart';
 
-import 'package:http/http.dart';
-
 class History extends StatefulWidget {
   const History({super.key});
 
@@ -12,7 +10,6 @@ class History extends StatefulWidget {
 
 class _HistoryState extends State<History> {
   @override
-  
   bool val1 = false;
   bool val2 = true;
   bool val3 = true;
@@ -53,26 +50,13 @@ class _HistoryState extends State<History> {
     Size size = MediaQuery.of(context).size;
 
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Poppins-Regular'),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
           child: Scaffold(
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
         body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 0, 0, 0),
-              Color.fromARGB(255, 24, 24, 24),
-              Color.fromARGB(255, 82, 82, 82),
-              Color.fromARGB(255, 24, 24, 24),
-              Color.fromARGB(255, 0, 0, 0),
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-          ),
           child: Column(
             children: [
-              SizedBox(
-                height: 10,
-              ),
               Row(
                 children: [
                   Container(
@@ -88,8 +72,7 @@ class _HistoryState extends State<History> {
                     child: Text(
                       "History & Privacy",
                       style: TextStyle(
-                          fontFamily: 'Right',
-                          fontSize: 25,
+                          fontSize: 26,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
@@ -100,28 +83,22 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                    width: 250,
-                    // color: Colors.red,
                     margin: EdgeInsets.only(top: 30, left: 10),
                     child: Text(
                       "Clear Play History",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
                     ),
                   ),
                   Container(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                     margin: EdgeInsets.only(top: 30, left: size.width - 242),
-=======
-                    margin: EdgeInsets.only(top: 30, left: size.width - 321),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                     child: Text(
                       "Clear",
                       style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 16,
                           color: Color.fromARGB(255, 0, 255, 221),
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
@@ -132,27 +109,22 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                    width: 250,
                     margin: EdgeInsets.only(top: 27, left: 10),
                     child: Text(
                       "Clear Search History",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
                     ),
                   ),
                   Container(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                     margin: EdgeInsets.only(top: 27, left: size.width - 266),
-=======
-                    margin: EdgeInsets.only(top: 27, left: size.width - 321),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                     child: Text(
                       "Clear",
                       style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 16,
                           color: Color.fromARGB(255, 0, 255, 221),
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
@@ -163,40 +135,22 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                    width: 250,
                     margin: EdgeInsets.only(top: 30, left: 10),
                     child: Text(
                       "Stop Play History",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 22,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
                     ),
                   ),
                   Container(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                     margin: EdgeInsets.only(top: 12, left: size.width - 265),
-=======
-                    margin: EdgeInsets.only(top: 17, left: size.width - 327),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                     height: 50,
 
-                    child: Transform.scale(
-                      scale: 1.1,
-                      child: Switch(
-                        value: val1,
-                        onChanged: (onChanged) {
-                          setState(() {
-                            val1 = onChanged;
-                          });
-                        },
-                        activeColor: Color.fromARGB(255, 178, 178, 178),
-                        inactiveTrackColor: Color.fromARGB(255, 0, 255, 255),
-                        thumbColor: MaterialStateProperty.all(val1
-                            ? Color.fromARGB(255, 255, 255, 255)
-                            : Color.fromARGB(255, 255, 255, 255)),
-                      ),
+                    child: FittedBox(
+                      child: customSwitch(val1, onChangeFunction1),
                     ),
                     // customSwitch('Abcd', val2, onChangeFunction2),
                   ),
@@ -205,40 +159,22 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                    width: 250,
                     margin: EdgeInsets.only(top: 27, left: 10),
                     child: Text(
                       "Stop Search History",
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 22,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.4),
                     ),
                   ),
                   Container(
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                     margin: EdgeInsets.only(top: 10, left: size.width - 294),
-=======
-                    margin: EdgeInsets.only(top: 15, left: size.width - 327),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                     height: 50,
 
-                    child: Transform.scale(
-                      scale: 1.1,
-                      child: Switch(
-                        value: val1,
-                        onChanged: (onChanged) {
-                          setState(() {
-                            val1 = onChanged;
-                          });
-                        },
-                        activeColor: Color.fromARGB(255, 178, 178, 178),
-                        inactiveTrackColor: Color.fromARGB(255, 0, 255, 255),
-                        thumbColor: MaterialStateProperty.all(val1
-                            ? Color.fromARGB(255, 255, 255, 255)
-                            : Color.fromARGB(255, 255, 255, 255)),
-                      ),
+                    child: FittedBox(
+                      child: customSwitch(val2, onChangeFunction2),
                     ),
                     // customSwitch('Abcd', val2, onChangeFunction2),
                   ),
@@ -247,7 +183,6 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                      width: 250,
                       margin: EdgeInsets.only(left: 10, top: 25),
                       child: Text(
                         "Manage All Activities",
@@ -255,23 +190,19 @@ class _HistoryState extends State<History> {
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                       width: 50,
                       height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                       margin: EdgeInsets.only(top: 20, left: size.width - 290),
-=======
-                      margin: EdgeInsets.only(top: 20, left: size.width - 315),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
                         color: Color.fromARGB(255, 255, 255, 255),
-                        iconSize: 37,
+                        iconSize: 44,
                         onPressed: () {},
                       ))
                 ],
@@ -279,7 +210,6 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                      width: 250,
                       margin: EdgeInsets.only(left: 10, top: 10),
                       child: Text(
                         "Change Password",
@@ -287,23 +217,19 @@ class _HistoryState extends State<History> {
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                       width: 50,
                       height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                       margin: EdgeInsets.only(top: 8, left: size.width - 255),
-=======
-                      margin: EdgeInsets.only(top: 8, left: size.width - 315),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
                         color: Color.fromARGB(255, 255, 255, 255),
-                        iconSize: 37,
+                        iconSize: 44,
                         onPressed: () {},
                       ))
                 ],
@@ -311,7 +237,6 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                      width: 250,
                       margin: EdgeInsets.only(left: 10, top: 10),
                       child: Text(
                         "Ads Settings",
@@ -319,23 +244,19 @@ class _HistoryState extends State<History> {
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                       width: 50,
                       height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                       margin: EdgeInsets.only(top: 10, left: size.width - 205),
-=======
-                      margin: EdgeInsets.only(top: 10, left: size.width - 315),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
                         color: Color.fromARGB(255, 255, 255, 255),
-                        iconSize: 37,
+                        iconSize: 44,
                         onPressed: () {},
                       ))
                 ],
@@ -343,7 +264,6 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                      width: 250,
                       margin: EdgeInsets.only(left: 10, top: 10),
                       child: Text(
                         "Terms & Conditions",
@@ -351,23 +271,19 @@ class _HistoryState extends State<History> {
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                       width: 50,
                       height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                       margin: EdgeInsets.only(top: 8, left: size.width - 275),
-=======
-                      margin: EdgeInsets.only(top: 8, left: size.width - 315),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
                         color: Color.fromARGB(255, 255, 255, 255),
-                        iconSize: 37,
+                        iconSize: 44,
                         onPressed: () {},
                       ))
                 ],
@@ -375,7 +291,6 @@ class _HistoryState extends State<History> {
               Row(
                 children: [
                   Container(
-                      width: 250,
                       margin: EdgeInsets.only(left: 10, top: 10),
                       child: Text(
                         "About App",
@@ -383,23 +298,19 @@ class _HistoryState extends State<History> {
                           fontWeight: FontWeight.w700,
                           wordSpacing: 0,
                           letterSpacing: 1.2,
-                          fontSize: 17,
+                          fontSize: 20,
                           color: Color.fromARGB(255, 255, 255, 255),
                         ),
                       )),
                   Container(
                       width: 50,
                       height: 50,
-<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/history_page.dart
                       margin: EdgeInsets.only(top: 10, left: size.width - 182),
-=======
-                      margin: EdgeInsets.only(top: 10, left: size.width - 315),
->>>>>>> Stashed changes:emplayer/lib/account_page/history_page.dart
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
                         color: Color.fromARGB(255, 255, 255, 255),
-                        iconSize: 37,
+                        iconSize: 44,
                         onPressed: () {},
                       ))
                 ],

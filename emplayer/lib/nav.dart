@@ -1,5 +1,4 @@
 import 'package:emplayer/account_page/account_page.dart';
-import 'package:emplayer/home_page/homepage.dart';
 import 'package:emplayer/library_page/library.dart';
 import 'package:emplayer/main.dart';
 import 'package:emplayer/search_page/searchPage.dart';
@@ -26,7 +25,7 @@ class _NavBarState extends State<NavBar> {
                
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => MyApp()),
                 );
               });
             },
