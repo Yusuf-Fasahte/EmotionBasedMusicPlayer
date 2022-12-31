@@ -1,5 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.emplayer">
+<<<<<<< HEAD
+=======
+    
+    
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+>>>>>>> parent of be654b9 (layout)
    <application
         android:label="emplayer"
         android:name="${applicationName}"

@@ -92,7 +92,11 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
+<<<<<<< HEAD
                     margin: EdgeInsets.only(top: 30, left: 175),
+=======
+                    margin: EdgeInsets.only(top: 30, left: size.width - 242),
+>>>>>>> parent of be654b9 (layout)
                     child: Text(
                       "Clear",
                       style: TextStyle(
@@ -118,7 +122,11 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
+<<<<<<< HEAD
                     margin: EdgeInsets.only(top: 27, left: 152),
+=======
+                    margin: EdgeInsets.only(top: 27, left: size.width - 266),
+>>>>>>> parent of be654b9 (layout)
                     child: Text(
                       "Clear",
                       style: TextStyle(
@@ -144,7 +152,11 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
+<<<<<<< HEAD
                     margin: EdgeInsets.only(top: 12, left: 155),
+=======
+                    margin: EdgeInsets.only(top: 12, left: size.width - 265),
+>>>>>>> parent of be654b9 (layout)
                     height: 50,
 
                     child: FittedBox(
@@ -168,7 +180,11 @@ class _HistoryState extends State<History> {
                     ),
                   ),
                   Container(
+<<<<<<< HEAD
                     margin: EdgeInsets.only(top: 10, left: 128),
+=======
+                    margin: EdgeInsets.only(top: 10, left: size.width - 294),
+>>>>>>> parent of be654b9 (layout)
                     height: 50,
 
                     child: FittedBox(
@@ -195,7 +211,11 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 20, left: 126),
+=======
+                      margin: EdgeInsets.only(top: 20, left: size.width - 290),
+>>>>>>> parent of be654b9 (layout)
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -222,7 +242,11 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 8, left: 161),
+=======
+                      margin: EdgeInsets.only(top: 8, left: size.width - 255),
+>>>>>>> parent of be654b9 (layout)
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -249,7 +273,11 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 10, left: 211),
+=======
+                      margin: EdgeInsets.only(top: 10, left: size.width - 205),
+>>>>>>> parent of be654b9 (layout)
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -276,7 +304,11 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 8, left: 142),
+=======
+                      margin: EdgeInsets.only(top: 8, left: size.width - 275),
+>>>>>>> parent of be654b9 (layout)
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),
@@ -303,7 +335,11 @@ class _HistoryState extends State<History> {
                   Container(
                       width: 50,
                       height: 50,
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 10, left: 233),
+=======
+                      margin: EdgeInsets.only(top: 10, left: size.width - 182),
+>>>>>>> parent of be654b9 (layout)
                       alignment: Alignment.center,
                       child: IconButton(
                         icon: const Icon(Icons.navigate_next_rounded),

@@ -8,17 +8,56 @@ import 'edit_gmail.dart';
 import 'edit_name.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+<<<<<<< HEAD
 class profile_page extends StatelessWidget {
   const profile_page({super.key});
 
   @override
   Widget build(BuildContext context) {
+=======
+class profile_page extends StatefulWidget {
+  String username;
+
+  profile_page({required this.username});
+
+  @override
+  State<profile_page> createState() => _profile_pageState();
+}
+
+class _profile_pageState extends State<profile_page> {
+  int temp = 0;
+  // File galleryFile;
+  @override
+  Widget build(BuildContext context) {
+    // imageSelectorGallery() async {
+    //   galleryFile = await ImagePicker.pickImage(
+    //     source: ImageSource.Pgallery,
+    //     // maxHeight: 50.0,
+    //     // maxWidth: 50.0,
+    //   );
+    //   setState(() {});
+    // }
+
+    Size size = MediaQuery.of(context).size;
+    // if (temp > 0)
+
+>>>>>>> parent of be654b9 (layout)
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: SafeArea(
           child: Scaffold(
             backgroundColor: Color.fromARGB(255, 0, 0, 0),
             body: Container(
+<<<<<<< HEAD
+=======
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Colors.black,
+                  Color.fromARGB(255, 63, 62, 62),
+                  Color.fromARGB(255, 99, 98, 98),
+                ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+              ),
+>>>>>>> parent of be654b9 (layout)
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
@@ -56,7 +95,12 @@ class profile_page extends StatelessWidget {
                           alignment: Alignment.center,
                           width: 130,
                           height: 130,
+<<<<<<< HEAD
                           margin: EdgeInsets.only(top: 27, left: 140),
+=======
+                          margin:
+                              EdgeInsets.only(top: 27, left: size.width / 3),
+>>>>>>> parent of be654b9 (layout)
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.cover,
@@ -68,6 +112,10 @@ class profile_page extends StatelessWidget {
                       ],
                     ),
                   ),
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream:emplayer/lib/Niranjan_account_page/profile/profile.dart
+>>>>>>> parent of be654b9 (layout)
                   Container(
                     margin: EdgeInsets.only(left: 75, top: 10),
                     child: Center(
@@ -91,6 +139,28 @@ class profile_page extends StatelessWidget {
                       ),
                     )),
                   ),
+<<<<<<< HEAD
+=======
+                  Center(
+                      child: SizedBox(
+                    // width: 250.0,
+                    child: DefaultTextStyle(
+                      style: const TextStyle(
+                        fontSize: 27,
+                        fontFamily: 'Agne',
+                      ),
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          for (int i = 0; i < 10; i++)
+                            TypewriterAnimatedText(widget.username),
+                        ],
+                        onTap: () {
+                          print(widget.username.length);
+                        },
+                      ),
+                    ),
+                  )),
+>>>>>>> parent of be654b9 (layout)
                   Row(
                     children: [
                       Container(
@@ -108,6 +178,7 @@ class profile_page extends StatelessWidget {
                             ),
                           )),
                       Container(
+<<<<<<< HEAD
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 255, 255, 255),
                               borderRadius: BorderRadius.circular(50)),
@@ -126,6 +197,22 @@ class profile_page extends StatelessWidget {
                             //   color: Color.fromARGB(255, 75, 75, 75),
                             // )
                           )),
+=======
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(50)),
+                        margin: EdgeInsets.only(
+                            top: 30, left: size.width - 300, bottom: 20),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Image.asset(
+                            'assets/images/icons/add-photo.png',
+                            color: Color.fromARGB(255, 67, 66, 66),
+                            width: 29,
+                          ),
+                        ),
+                      ),
+>>>>>>> parent of be654b9 (layout)
                     ],
                   ),
                   Container(
@@ -144,6 +231,11 @@ class profile_page extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< HEAD
+=======
+                          width: 300,
+                          // color: Colors.red,
+>>>>>>> parent of be654b9 (layout)
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "Ryan Reynolds",
@@ -158,7 +250,14 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editname()));
                           }),
                           child: Container(
+<<<<<<< HEAD
                             margin: EdgeInsets.only(left: 212),
+=======
+                            // width: 110,
+                            // color: Colors.red,
+                            // alignment: Alignment.centerRight,
+                            margin: EdgeInsets.only(left: size.width - 383),
+>>>>>>> parent of be654b9 (layout)
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -192,6 +291,10 @@ class profile_page extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< HEAD
+=======
+                          width: 300,
+>>>>>>> parent of be654b9 (layout)
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "xxxxxxx811",
@@ -206,7 +309,11 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editcontact()));
                           }),
                           child: Container(
+<<<<<<< HEAD
                             margin: EdgeInsets.only(left: 238),
+=======
+                            margin: EdgeInsets.only(left: size.width - 383),
+>>>>>>> parent of be654b9 (layout)
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -240,6 +347,10 @@ class profile_page extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< HEAD
+=======
+                          width: 300,
+>>>>>>> parent of be654b9 (layout)
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "MRANDERSON@GAMIL.COM",
@@ -254,7 +365,11 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editgmail()));
                           }),
                           child: Container(
+<<<<<<< HEAD
                             margin: EdgeInsets.only(left: 87),
+=======
+                            margin: EdgeInsets.only(left: size.width - 383),
+>>>>>>> parent of be654b9 (layout)
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -288,6 +403,10 @@ class profile_page extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< HEAD
+=======
+                          width: 300,
+>>>>>>> parent of be654b9 (layout)
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "19",
@@ -302,7 +421,11 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editage()));
                           }),
                           child: Container(
+<<<<<<< HEAD
                             margin: EdgeInsets.only(left: 314),
+=======
+                            margin: EdgeInsets.only(left: size.width - 383),
+>>>>>>> parent of be654b9 (layout)
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -336,6 +459,10 @@ class profile_page extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+<<<<<<< HEAD
+=======
+                          width: 300,
+>>>>>>> parent of be654b9 (layout)
                           margin: EdgeInsets.only(left: 7),
                           child: Text(
                             "MALE",
@@ -350,7 +477,11 @@ class profile_page extends StatelessWidget {
                                 builder: (context) => editgender()));
                           }),
                           child: Container(
+<<<<<<< HEAD
                             margin: EdgeInsets.only(left: 285),
+=======
+                            margin: EdgeInsets.only(left: size.width - 383),
+>>>>>>> parent of be654b9 (layout)
                             child: Text(
                               "EDIT",
                               style: TextStyle(
@@ -404,6 +535,12 @@ class _LargeimgState extends State<Largeimg> {
                     fit: BoxFit.cover,
                     image: NetworkImage(
                         'https://c4.wallpaperflare.com/wallpaper/285/215/820/red-weapons-fiction-mask-wallpaper-preview.jpg')),
+<<<<<<< HEAD
+=======
+=======
+   'http://m.gettywallpapers.com/wp-content/uploads/2021/02/Naruto-HD-Wallpaper-Download.jpg')),
+>>>>>>> Stashed changes:emplayer/lib/account_page/profile/profile.dart
+>>>>>>> parent of be654b9 (layout)
                 color: Color.fromARGB(255, 255, 16, 16),
                 borderRadius: BorderRadius.circular(15),
               ),
