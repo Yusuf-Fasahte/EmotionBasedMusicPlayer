@@ -1,6 +1,5 @@
 import 'package:emplayer/Niranjan_account_page/account_page.dart';
 import 'package:flutter/material.dart';
-<<<<<<< Updated upstream
 
 void main() {
   runApp(MaterialApp(
@@ -28,9 +27,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
     return account();
-=======
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
@@ -46,6 +43,5 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
->>>>>>> Stashed changes
   }
 }
